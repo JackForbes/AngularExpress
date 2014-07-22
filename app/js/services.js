@@ -71,7 +71,6 @@ angular.module('myApp.services', []).
       function onScriptLoad() {
         // Load client in the browser
         $rootScope.$apply(function() {
-          console.log(scriptTag);
           var s = skrollr.init({
             forceHeight: false
           });

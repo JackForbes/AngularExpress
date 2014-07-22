@@ -1,0 +1,29 @@
+<div class="interests">
+  <div class="leftPanel">
+    <div ng-click="setInterestsTab('soccer')">
+        <img src="img/interests/Soccer.jpg">
+    </div>
+    <div ng-click="setInterestsTab('coding')">
+        <img src="img/interests/AngularJS.png">
+    </div>
+    <div ng-click="setInterestsTab('skiing')">
+        <img src="img/interests/Skiing.jpg">
+    </div>
+    <div ng-click="setInterestsTab('tennis')">
+        <img src="img/interests/Tennis.jpg">
+    </div>
+    <div ng-click="setInterestsTab('renewable')">
+        <img src="img/interests/Renewable_Energy.jpg">
+    </div>
+  </div>
+  <div class="rightPanel">
+    <div ng-switch on="interestsTab">
+        <div class="animate-switch" ng-switch-when="soccer"><img width="30%" src="img/interests/soccer/Soccer-Waterloo.jpg">I have lived and breathed soccer since I was six years old, and still enjoy playing at University. Soccer is my favourite sport, by far, as it is very athletic and can be played during all times of the year (otherwise skiing would take the lead as my favourite). Soccer has been a very big part of my life, as I have been on many different teams and attended many soccer camps. My best friend introduced me to soccer when I was five and I played on a team for four years in Waterloo, Ontario, until I moved to Bainbridge Island, Washington. In Washington, I played on a recreational team for one year until I could try out for the Select team (top right photo). I played on the Bainbridge FC team from the age of 12 to the age of 17. While on this team, we played in many tournaments across Washington State, and either won or placed second in many tournaments each year. Also during this time, I attended soccer camps during the summers, one of which is shown on the left, called Vogelsinger Soccer Camp. Fortunately, my Select team did not interfere with the high school teams, so I was able to play Junior Varsity and Varsity soccer in high school, while still playing Select. Our Junior Varsity team placed first each year I played, and our Varsity team broke multiple records when I played in Grade 12. We had the best Varsity soccer season Bainbridge High School had ever had in 2011, as we became Metro Champions (shown at the bottom), made it to Quarter-finals, Semi-finals, and the Finals in State, as well as Academic State Champions for the highest overall player GPAs. We placed second in State and were overwhelmed with excitement. Once at university, I made the University of Waterloo's Varsity Soccer team in the fall of 2012 (since I was unable to tryout the year before) as shown at the top.
+        </div>
+        <div class="animate-switch" ng-switch-when="renewable">Renewable Energy Div</div>
+        <div class="animate-switch" ng-switch-when="coding">Coding Div</div>
+        <div class="animate-switch" ng-switch-when="skiing">Skiing Div</div>
+        <div class="animate-switch" ng-switch-when="tennis">Tennis Div</div>
+    </div>
+  </div>
+</div>
