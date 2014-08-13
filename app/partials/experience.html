@@ -5,31 +5,24 @@
     </div>
   </div>
   <div class='job' skrollr
-    data-bottom-center="background-color:rgb(180,180,180);" data-center-center="background-color:rgb(230,230,230);" data-top-center="background-color:rgb(180,180,180);">
-    <div>
-      <span><img src="img/logos/EA-Sports-Logo.png">Electronic Arts</span>
+    ng-repeat="job in SiteModel.jobs"
+    data-bottom-center="background-color:rgb(180,180,180);"
+    data-center-center="background-color:rgb(230,230,230);"
+    data-top-center="background-color:rgb(180,180,180);">
+    <div class="job-header">
+      <div>
+        <span class="job-header-company">{{job.company}}<img ng-src="{{job.logo}}"></span>
+      </div>
+      <div class="job-header-date">{{job.date}}</div>
     </div>
-    <p>My most recent co-op term was as a Software Engineer at EA Sports in Burnaby, BC. Specifically, I was a web developer on the Pulse team, working on online Fifa Ultimate Team content.</p>
-  </div>
-  <div class='job' skrollr
-    data-bottom-center="background-color:rgb(180,180,180);" data-center-center="background-color:rgb(230,230,230);" data-top-center="background-color:rgb(180,180,180);">
-    <div>
-      <span><img src="img/logos/BC-Hydro-Logo.png">BC Hydro</span>
-    </div>
-    <p>For my third co-op term I decided to try something different from what I had previously been doing, and worked in project management at BC Hydro in Vancouver and Langley, BC. Jumping into the world of project management taught me a lot in a short amount of time, from dealing with the politics of managements, to tight deadlines. Having experience in both software development and project management has given me a valuable outlook on running a functional and cohesive technology company.</p>
-  </div>
-  <div class='job' skrollr
-    data-bottom-center="background-color:rgb(180,180,180);" data-center-center="background-color:rgb(230,230,230);" data-top-center="background-color:rgb(180,180,180);">
-    <div>
-      <span><img src="img/logos/Gumstix-Logo.png">Gumstix Inc</span>
-    </div>
-    <p>For my second co-op term I assisted in Growth Hacking at Gumstix Inc, in Redwood City, California. Words truly cannot describe how enjoyable those four months in California were. They say that no matter how nice a place is to live, people will get used to it. Well four months must be the perfect amount of time to live somewhere because I loved every minute of it, from the weather, to the weekend adventures, to the work itself! The most rewarding part was probably just the fact that I actually enjoyed the work I was doing and looked forward to coming to work each day. It gave me great confidence in my career choice, as my idea of becoming a web developer/software engineer was solidified. Not to mention diving into the technology capitol of the world is a huge learning experience! During this term I was able to gain professional experience as a web developer, familiarizing myself with many new languages, IDEs, and a new Operating System.</p>
-  </div>
-  <div class='job' skrollr
-    data-bottom-center="background-color:rgb(180,180,180);" data-center-center="background-color:rgb(230,230,230);" data-top-center="background-color:rgb(180,180,180);">
-    <div>
-      <span><img src="img/logos/Conrad-Logo.png">Enterprise Co-op</span>
-    </div>
-    <p>During the 2012 winter school term, a classmate and I conceptualized a music recommendation system that we later called “NextBestSong”. For our first co-op term at the University of Waterloo, we were accepted into the Enterprise Co-op program at the University of Waterloo. Although we were the youngest of the 15 groups accepted, we taught ourselves the necessary web development and worked with a USC student and a former Microsoft employee, to develop the product and website. My role in the company has been creating the user interface, all functionality, and connecting the interface to our database. Over the course of the summer, I learned a great deal about web development and learned many new programming languages. We are still at work to release the Beta for NextBestSong.com.</p>
+    <div>Position: {{job.position}}, Framework: {{job.framework}}, Languages: {{job.languages}}</div>
   </div>
 </div>
+
+    <!-- <p>My most recent co-op term was as a Software Engineer at EA Sports in Burnaby, BC. Specifically, I was a web developer on the Pulse team, working on online Fifa Ultimate Team content.</p> -->
+
+    <!-- <p>For my third co-op term I decided to try something different from what I had previously been doing, and worked in project management at BC Hydro in Vancouver and Langley, BC. Jumping into the world of project management taught me a lot in a short amount of time, from dealing with the politics of managements, to tight deadlines. Having experience in both software development and project management has given me a valuable outlook on running a functional and cohesive technology company.</p> -->
+
+    <!-- <p>For my second co-op term I assisted in Growth Hacking at Gumstix Inc, in Redwood City, California. Words truly cannot describe how enjoyable those four months in California were. They say that no matter how nice a place is to live, people will get used to it. Well four months must be the perfect amount of time to live somewhere because I loved every minute of it, from the weather, to the weekend adventures, to the work itself! The most rewarding part was probably just the fact that I actually enjoyed the work I was doing and looked forward to coming to work each day. It gave me great confidence in my career choice, as my idea of becoming a web developer/software engineer was solidified. Not to mention diving into the technology capitol of the world is a huge learning experience! During this term I was able to gain professional experience as a web developer, familiarizing myself with many new languages, IDEs, and a new Operating System.</p> -->
+
+    <!-- <p>During the 2012 winter school term, a classmate and I conceptualized a music recommendation system that we later called “NextBestSong”. For our first co-op term at the University of Waterloo, we were accepted into the Enterprise Co-op program at the University of Waterloo. Although we were the youngest of the 15 groups accepted, we taught ourselves the necessary web development and worked with a USC student and a former Microsoft employee, to develop the product and website. My role in the company has been creating the user interface, all functionality, and connecting the interface to our database. Over the course of the summer, I learned a great deal about web development and learned many new programming languages. We are still at work to release the Beta for NextBestSong.com.</p> -->

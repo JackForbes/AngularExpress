@@ -21,7 +21,7 @@ angular.module('myApp.directives', []).
             viewport: viewport
           };
           page.render(renderContext);
-          canvas.style.boxShadow = "0 0 10px 1px #FFBD08";
+          canvas.style.boxShadow = "rgb(0,0,0) 0px 0px 10px 1px";
         });
 
         pdf.getPage(2).then(function(page) {
@@ -35,7 +35,7 @@ angular.module('myApp.directives', []).
             viewport: viewport
           };
           page.render(renderContext);
-          canvas.style.boxShadow = "0 0 10px 1px #FFBD08";
+          canvas.style.boxShadow = "rgb(0,0,0) 0px 0px 10px 1px";
         });
       });
     };
