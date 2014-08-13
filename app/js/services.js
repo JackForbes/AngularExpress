@@ -31,6 +31,37 @@ angular.module('myApp.services', []).
           text: 'Interests'
         }
       ],
+      jobs: [
+        {
+          company: 'Electronic Arts',
+          logo: 'img/logos/EA-Sports-Logo.png',
+          date: 'May - September, 2014',
+          position: 'Software Engineer',
+          framework: 'Symfony2',
+          languages: 'AngularJS'
+        },
+        {
+          company: 'BC Hydro',
+          logo: 'img/logos/BC-Hydro-Logo.png',
+          date: 'September - December, 2013',
+          framework: 'none',
+          languages: 'Perl and VB'
+        },
+        {
+          company: 'Gumstix Inc',
+          logo: 'img/logos/Gumstix-Logo.png',
+          date: 'January - May, 2013',
+          framework: 'Symfony2',
+          languages: 'JQuery, PHP'
+        },
+        {
+          company: 'UW Enterprise Co-op',
+          logo: 'img/logos/Conrad-Logo.png',
+          date: 'May - September, 2012',
+          framework: 'Visual Studios',
+          languages: 'C#'
+        }
+      ],
       interests: [
         {
           name: 'soccer',
@@ -171,9 +202,8 @@ angular.module('myApp.services', []).
         });
       }
 
-      // Create a script tag with skrollr as the source
-      // and call our onScriptLoad callback when it
-      // has been loaded
+      // Create a script tag with skrollr as the source and call
+      // onScriptLoad callback when it has been loaded
 
       var scriptTag = $(document)[0].createElement('script');
       scriptTag.type = 'text/javascript';
