@@ -1,0 +1,44 @@
+<div class="experience">
+  <!-- <div d3-bars bar-height="20" bar-padding="5"></div> -->
+  <div class="skills" skrollr
+    data-bottom-center="background-color:rgb(180,180,180);"
+    data-center-center="background-color:rgb(230,230,230);"
+    data-top-center="background-color:rgb(180,180,180);">
+    <div class="skills-header header">
+      <div>
+        <div>
+          <h3 class="inline-block">Skills</h3>
+        </div>
+        <div class="sub-header">100 = what I know and enjoy the most</div>
+      </div>
+    </div>
+      <div d3-skill
+        ng-repeat="skill in SiteModel.skills"
+        class="skill"
+        skill-label="{{skill.label}}"
+        skill-value="{{skill.value}}">
+      </div>
+  </div>
+  <div class='job' skrollr
+    ng-repeat="job in SiteModel.jobs"
+    data-bottom-center="background-color:rgb(180,180,180);"
+    data-center-center="background-color:rgb(230,230,230);"
+    data-top-center="background-color:rgb(180,180,180);">
+    <div class="job-header header">
+      <div>
+        <div>
+          <h3 class="inline-block">{{job.company}}</h3>
+          <img ng-src="{{job.logo}}">
+        </div>
+        <div class="sub-header">{{job.position}}</div>
+      </div>
+      <div class="job-header-date">{{job.date}}</div>
+    </div>
+    <p>{{job.description}}</p>
+  </div>
+  <div id="map-canvas">
+    <div id="class" ng-repeat="marker in markers | orderBy : 'title'">
+      <a href="#" ng-click="openInfoWindow($event, marker)">{{marker.title}}</a>
+    </div>
+  </div>
+</div>

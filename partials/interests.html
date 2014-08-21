@@ -1,0 +1,39 @@
+<div class="interests">
+  <div class="interests-activities">
+    <div ng-click="setInterestsTab('soccer')">
+        <img src="img/interests/Soccer.jpg" ng-class="{'active': interestsTab == 'soccer'}">
+    </div>
+    <div ng-click="setInterestsTab('coding')">
+        <img src="img/interests/AngularJS.png" ng-class="{'active': interestsTab == 'coding'}">
+    </div>
+    <div ng-click="setInterestsTab('skiing')">
+        <img src="img/interests/Skiing.jpg" ng-class="{'active': interestsTab == 'skiing'}">
+    </div>
+    <div ng-click="setInterestsTab('tennis')">
+        <img src="img/interests/Tennis.jpg" ng-class="{'active': interestsTab == 'tennis'}">
+    </div>
+    <div ng-click="setInterestsTab('renewable')">
+        <img src="img/interests/Renewable_Energy.jpg" ng-class="{'active': interestsTab == 'renewable'}">
+    </div>
+  </div>
+  <div class="interests-description">
+    <div ng-switch on="interestsTab">
+      <div class="animate-switch" ng-switch-when="soccer">
+        I have lived and breathed soccer since I was six years old, and still enjoy playing at University. Soccer is my favourite sport, by far, as it is very athletic and can be played during all times of the year (otherwise skiing would take the lead as my favourite). Soccer has been a very big part of my life, as I have been on many different teams and attended many soccer camps. My best friend introduced me to soccer when I was five and I played on a team for four years in Waterloo, Ontario, until I moved to Bainbridge Island, Washington. In Washington, I played on a recreational team for one year until I could try out for the Select team (top right photo). I played on the Bainbridge FC team from the age of 12 to the age of 17. While on this team, we played in many tournaments across Washington State, and either won or placed second in many tournaments each year. Also during this time, I attended soccer camps during the summers, one of which is shown on the left, called Vogelsinger Soccer Camp. Fortunately, my Select team did not interfere with the high school teams, so I was able to play Junior Varsity and Varsity soccer in high school, while still playing Select. Our Junior Varsity team placed first each year I played, and our Varsity team broke multiple records when I played in Grade 12. We had the best Varsity soccer season Bainbridge High School had ever had in 2011, as we became Metro Champions (shown at the bottom), made it to Quarter-finals, Semi-finals, and the Finals in State, as well as Academic State Champions for the highest overall player GPAs. We placed second in State and were overwhelmed with excitement. Once at university, I made the University of Waterloo's Varsity Soccer team in the fall of 2012 (since I was unable to tryout the year before) as shown at the top.
+        <!-- <div><img width="30%" src="img/interests/soccer/Soccer-Waterloo.jpg"></div> -->
+      </div>
+      <div class="animate-switch" ng-switch-when="renewable">
+        I have had a great interest in renewable energy throughout high school and have worked on many projects regarding different areas of renewable energy. Here are four of the presentations I have made and one of the essays regarding renewable energy, varying from helping poverty-stricken areas by supplying them with solar panels to making zero gas emission vehicles. The top three presentations were made in high school and the bottom presentation was made for MSCI 100 at the University of Waterloo.
+      </div>
+      <div class="animate-switch" ng-switch-when="coding">
+        CODING IS FUN!
+      </div>
+      <div class="animate-switch" ng-switch-when="skiing">
+        I have enjoyed skiing since I was two years old and have enjoyed all kinds of skiing; from racing to back-country to freestyle. While living in Waterloo, Ontario, I skiied every weekend of every winter at Osler Bluff Ski Club in Collingwood, Ontario from the age of three until the age of nine. My sister and I took lessons and raced at other ski clubs throughout Ontario. After moving to the United States, we skiied for recreation, only, enjoying the mountains that Washington and British Columbia have to offer. In the nine years I have lived in Washington State, I have had the good fortune to ski at many locations including: Whistler, Big White, Sun Peaks, Mount Baker, Steven's Pass, Crystal Mountain, Snoqualmie Pass, Alpental, and Silver Star.
+      </div>
+      <div class="animate-switch" ng-switch-when="tennis">
+        I have enjoyed playing tennis since I was six years old in Waterloo, Ontario. I was very fortunate to live in a neighbourhood that had a swimming pool and tennis courts, so during every summer from the age of six to the age of ten, I walked to the pool and tennis courts to take swimming and tennis lessons. Upon moving to Bainbridge Island, Washington, I was very fortunate, again, to have a tennis/athletic club near my house, called Bainbridge Athletic Club (BAC). I became a tennis member at BAC in 2006 and joined the Junior Tennis Academy from 2007 to 2009. I also joined the United States Tennis Association (USTA) Junior team in 2007 and played competitively in Junior tournaments for the next two years. Unfortunately the high school tennis season coincided with the soccer season so I played high school soccer instead of tennis.
+      </div>
+    </div>
+  </div>
+</div>
