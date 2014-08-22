@@ -22,6 +22,7 @@
     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
     ga('create', 'UA-47347515-1', 'auto');
+    ga('require', 'displayfeatures');
     ga('send', 'pageview');
   </script>
   <script src="bower_components/angular/angular.js"></script>
@@ -30,15 +31,13 @@
 <body id="skrollr-body">
 
 <div ng-controller="PageCtrl" ng-init="initialize()">
-  <div class="banner" role="main">
+  <header class="banner" role="main">
     <span class="banner-location">Whistler, BC</span>
     <h1 skrollr data-center="opacity: 1" data-top="opacity: 0">Jack Forbes</h1>
     <h2 skrollr data-center="opacity: 1" data-top="opacity: 0">Welcome to my app!</h2>
-  </div>
+  </header>
   <nav>
-    <ul>
-      <li ng-cloak ng-repeat="item in SiteModel.navItems"><a ng-class="getActiveNav(item.href)" ng-href="{{item.href}}">{{item.text}}</a></li>
-    </ul>
+      <a ng-cloak ng-repeat="item in SiteModel.navItems" ng-class="getActiveNav(item.href)" ng-href="{{item.href}}">{{item.text}}</a>
   </nav>
 
 
@@ -47,8 +46,7 @@
 
   <footer>
     <a href="mailto:jackforbes24@gmail.com?subject=Look! A Pre-Populated Subject!">jackforbes24@gmail.com</a>
-    <div class="dot"></div>
-    <a href="http://ca.linkedin.com/in/greaturl/" target="_blank">http://ca.linkedin.com/in/greaturl/</a>
+    <a class="linked-in" href="http://ca.linkedin.com/in/greaturl/" target="_blank">http://ca.linkedin.com/in/greaturl/</a>
   </footer>
 </div>
 

@@ -10,7 +10,6 @@ angular.module('myApp', [
   'myApp.controllers'
 ]).
 config(['$routeProvider', function($routeProvider) {
-  console.log($routeProvider);
   $routeProvider.when('#/', {templateUrl: 'partials/experience.html', controller: 'PageCtrl'});
   $routeProvider.when('/Experience', {templateUrl: 'partials/experience.html', controller: 'PageCtrl'});
   $routeProvider.when('/Web-Dev', {templateUrl: 'partials/web-dev.html', controller: 'PageCtrl'});

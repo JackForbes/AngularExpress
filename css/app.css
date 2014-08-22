@@ -57,11 +57,8 @@ body {
   font-family: 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
   color: #222;
 }
-a, a:link {
+a {
   color: #ff9400;
-}
-a:focus {
-  outline: thin dotted;
 }
 a:hover, a:active {
   outline: 0;
@@ -101,12 +98,6 @@ a:hover, a:active {
 ul {
   margin: 1em 0;
   padding: 0 0 0 40px;
-}
-nav ul {
-  list-style: none;
-  list-style-image: none;
-  margin: 0;
-  padding: 0;
 }
 img {
   border: 0;
@@ -150,7 +141,7 @@ h1 {
   -moz-transition: all .2s linear;
   -webkit-transition: all .2s linear;
 }
-h1:hover,h1:focus {
+h1:hover, h1:focus {
   -webkit-animation:shakey .25s ease-in-out alternate;
   -moz-animation:shakey .25s ease-in-out alternate;
   -webkit-transform:translate3d(0,0,0);
@@ -190,20 +181,13 @@ p {
   color: rgba(0,0,0,0.5);
   font-size: 1.1em;
 }
-nav ul li {
+nav a {
   display: inline-block;
-  margin: 22px 10px 23px;
-  color: #fff;
-  font-size: 1.4em;
+  margin: 20px 10px 20px;
+  font-size: 1.1em;
   font-weight: 200;
-  color: #999;
   text-transform: uppercase;
-  font-size: .9em;
-}
-nav ul li a {
-  color: #fff;
   text-decoration: none;
-  font-size: 1.4em;
   padding: 6px 12px;
   border-radius: 4px;
   transition: all .2s linear;
@@ -211,11 +195,9 @@ nav ul li a {
   -moz-transition: all .2s linear;
   -webkit-transition: all .2s linear;
 }
-nav ul li a.active {
+nav a.active {
   color: #ff9200;
   background: rgba(255,255,255,0.3);
-}
-.navbar {
 }
 footer {
   color: #fff;
@@ -238,16 +220,6 @@ footer {
   -o-transition: all .2s linear;
   -moz-transition: all .2s linear;
   -webkit-transition: all .2s linear;
-}
-.clearfix:before,.clearfix:after {
-  content: "";
-  display: table;
-}
-.clearfix:after {
-  clear: both;
-}
-.clearfix {
-  zoom: 1;
 }
 
 
@@ -445,14 +417,16 @@ footer {
 
 /* Favourites */
 .quotes {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: flex-start;
-  align-content: flex-start;
+  -webkit-column-count: 3;
+  -webkit-column-gap:   10px;
+  -moz-column-count:    3;
+  -moz-column-gap:      10px;
+  column-count:         3;
+  column-gap:           10px;
   font-family: 'Tangerine', cursive;
 }
 .quote {
+  display: inline-block;
   width: 250px;
   height: auto;
   background-color: #393630;
@@ -518,12 +492,10 @@ footer {
   -moz-animation: fadeIn 2s;
   -ms-animation: fadeIn 2s;
 }
-
 #wordsearch ul {
   margin: 0px;
   padding: 0px;
 }
-
 #wordsearch ul li {
   float: left;
   height: 55px;
@@ -547,7 +519,6 @@ footer {
   -webkit-transition: background-color 0.75s ease;
   -o-transition: background-color 0.75s ease;
 }
-
 #wordsearch ul li.selected {
   background-color: rgba(255,148,0,0.9);
   color: rgba(0,0,0,1);
@@ -564,8 +535,10 @@ footer a {
   font-family: 'Raleway', sans-serif;
   text-decoration: none;
 }
-.dot {
+.linked-in::before {
+  content: '';
   display: inline-block;
+  vertical-align: middle;
   margin: 0 6px;
   width: 5px;
   height: 5px;
@@ -574,6 +547,14 @@ footer a {
 }
 
 /* ==|== media queries ====================================================== PLACEHOLDER Media Queries for Responsive Design. These override the primary ('mobile first') styles Modify as content requires. ========================================================================== */
+@media only screen and (max-width: 1150px) {
+  /* Style adjustments for viewports 1150px and under go here */
+  .quotes {
+    -webkit-column-count: 2;
+    -moz-column-count:    2;
+    column-count:         2;
+  }
+}
 @media only screen and (max-width: 915px) {
   /* Style adjustments for viewports 915px and under go here */
   #map-canvas {
@@ -581,6 +562,14 @@ footer a {
   }
   .resume-canvas {
     width: 90%;
+  }
+}
+@media only screen and (max-width: 780px) {
+  /* Style adjustments for viewports 780px and under go here */
+  .quotes {
+    -webkit-column-count: 1;
+    -moz-column-count:    1;
+    column-count:         1;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -607,7 +596,7 @@ footer a {
   top: 300px;
   right: 20px;
   }
-  nav ul li a {
+  nav a {
     font-size: 1.2em;
     padding: 4px 6px;
     border-radius: 4px;

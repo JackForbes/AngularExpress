@@ -74,7 +74,7 @@ angular.module('myApp.services', []).
           logo: 'img/logos/EA-Sports-Logo.png',
           date: 'May - September, 2014',
           position: 'Software Engineer',
-          description: 'My most recent co-op term was as a Software Engineer at EA Sports in Burnaby, BC. I was a web developer on the Pulse team, working on online Fifa Ultimate Team content. A majority of my development at EA was with AngularJS, and my immediate love of the language inspired me to make this website using Angular!'
+          description: 'My most recent co-op term was as a Software Engineer at EA Sports in Burnaby, BC. I was a web developer on the Pulse team (internal digital agency), working on online Fifa Ultimate Team content. A majority of my development at EA was with AngularJS, and my immediate love of the language inspired me to make this website using Angular!'
         },
         {
           company: 'BC Hydro',
@@ -141,7 +141,7 @@ angular.module('myApp.services', []).
         },
         {
           city : 'Gumstix Inc',
-          desc : 'This city is live!',
+          desc : 'Growth Hacker',
           lat : 37.50636,
           long : -122.21108
         }
