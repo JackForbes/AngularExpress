@@ -53,7 +53,7 @@ body {
   margin: 0;
   font-size: 13px;
   line-height: 1.231;
-  background: #393630;
+  background: url('../img/grey-texture.png') repeat left top;
   font-family: 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
   color: #222;
 }
@@ -107,19 +107,24 @@ img {
   margin-right: 20px;
 }
 .banner {
-  height: 520px;
+  position: absolute;
+  top: 0;
+  height: 600px;
+  width: 100%;
   margin: 0;
   text-align: center;
-  background: url('../img/Whistler-Sunset.jpg') no-repeat center bottom;
-  border-top: 1px solid transparent;
+  background: url('../img/Whistler-Sunset.jpg') no-repeat center top;
   background-size: 100% 100%;
+  box-shadow: 0 4px 8px 0 #000000;
+  -webkit-box-shadow: 0 4px 8px 0 #000000;
+  border-top: 1px solid transparent;
   -webkit-animation: fadeIn 2s;
   -moz-animation: fadeIn 2s;
   -ms-animation: fadeIn 2s;
 }
 .banner-location {
   position: absolute;
-  top: 500px;
+  top: 560px;
   right: 20px;
   color: #999;
 }
@@ -129,7 +134,7 @@ h1 {
   font-size: 4em;
   color: #fff;
   text-align: center;
-  margin: 280px 0 0 0;
+  margin: 50px 0 0 0;
   padding: 0;
   text-shadow: 0 0 10px rgba(58,93,125,0.9);
   line-height: 1em;
@@ -154,7 +159,6 @@ h2 {
   border-radius: 4px;
   padding: 0;
   margin: 0;
-  margin: 2em 0;
   line-height: 3em;
   text-shadow: 0 0 5px rgba(58,93,125,1);
   transition: all .2s linear;
@@ -197,14 +201,10 @@ nav a {
 }
 nav a.active {
   color: #ff9200;
-  background: rgba(255,255,255,0.3);
-}
-footer {
-  color: #fff;
-  text-align: center;
+  background: rgba(0,0,0,0.3);
 }
 .content {
-  margin: 20px auto 40px;
+  margin: 100px auto;
   width: 70%;
   background: rgba(0,0,0,0.4);
   display: block;
@@ -526,11 +526,12 @@ footer {
 }
 
 /* Footer */
-footer {
+.footer {
   padding: 10px;
   color: #ff9400;
+  text-align: center;
 }
-footer a {
+.footer a {
   display: inline-block;
   font-family: 'Raleway', sans-serif;
   text-decoration: none;
@@ -607,7 +608,7 @@ footer a {
     font-size: 1em;
     padding: 10px 30px;
   }
-  footer a {
+  .footer a {
     font-size: 0.8em;
   }
 
