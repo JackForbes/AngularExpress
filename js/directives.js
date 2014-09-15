@@ -1,8 +1,6 @@
 'use strict';
 
 /* Directives */
-
-
 angular.module('myApp.directives', []).
   directive('resumePdf', [function() {
     return {

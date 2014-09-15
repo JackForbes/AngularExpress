@@ -120,6 +120,66 @@ angular.module('myApp.services', []).
           imgSrc: 'Renewable_Energy.jpg',
         }
       ],
+      photoGallery: {
+        soccer: [
+          {
+            src: 'img/interests/soccer/Soccer-Blue-Team.jpg',
+            desc: 'High School Select Soccer'
+          },
+          {
+            src: 'img/interests/soccer/Soccer-Trophy.jpg',
+            desc: 'High School Select Soccer Trophy'
+          },
+          {
+            src: 'img/interests/soccer/Soccer-Vogelsinger.jpg',
+            desc: 'Vogelsinger Soccer Camp'
+          },
+          {
+            src: 'img/interests/soccer/Soccer-Varsity.jpg',
+            desc: 'High School Varsity Soccer'
+          },
+          {
+            src: 'img/interests/soccer/Soccer-Select.jpg',
+            desc: 'High School Select Soccer'
+          },
+          {
+            src: 'img/interests/soccer/Soccer-Waterloo.jpg',
+            desc: 'University of Waterloo Varsity Soccer'
+          }
+        ],
+        skiing: [
+          {
+            src: 'img/interests/skiing/Family-Skiing.jpeg',
+            desc: 'Family Whistler Skiing'
+          },
+          {
+            src: 'img/interests/skiing/Whistler-Skiing.jpg',
+            desc: 'Flute Summit at Whistler'
+          },
+          {
+            src: 'img/interests/skiing/Heavenly-Skiing.jpg',
+            desc: 'Skiing at Heavenly, California'
+          },
+          {
+            src: 'img/interests/skiing/Waterloo-Skiing.jpg',
+            desc: 'Skiing at Waterloo, Ontario'
+          }
+        ],
+        tennis: [
+          {
+            src: 'img/interests/tennis/BAC.jpg',
+            desc: 'Where I grew up playing tennis'
+          },
+          {
+            src: 'img/interests/tennis/BAC-Logo.jpg',
+            desc: 'Bainbridge Athletic Club'
+          }
+        ],
+        coding: {
+            src: 'img/interests/coding/EA-Team.jpg',
+            desc: 'Pulse team at EA Sports'
+        }
+      },
       cities: [
         {
           city : 'Enterprise Co-op',

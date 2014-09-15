@@ -18,6 +18,7 @@ angular.module('myApp.controllers', [])
 
     $scope.setInterestsTab = function(activeTab) {
       $scope.interestsTab = activeTab;
+      $scope.photoIndex = 0;
     };
 
     $scope.$on('$viewContentLoaded', function() {
@@ -61,6 +62,35 @@ angular.module('myApp.controllers', [])
       var selectedIndices = [12,13,14,26,27,28,29,33,34,35,49,50,51,52,53];
       return selectedIndices.indexOf(index) > -1;
     }
+
+
+
+    $scope.photoIndex = 0;
+
+    $scope.isActivePhoto = function (index) {
+      return $scope.photoIndex === index;
+    };
+
+    $scope.showPrevPhoto = function (total) {
+      if ($scope.photoIndex == 0) {
+        $scope.photoIndex = total - 1;
+      } else {
+        $scope.photoIndex = $scope.photoIndex - 1;
+      }
+    };
+
+    $scope.showNextPhoto = function (total) {
+      if ($scope.photoIndex == (total - 1)) {
+        $scope.photoIndex = 0;
+      } else {
+        $scope.photoIndex = $scope.photoIndex + 1;
+      }
+    };
+
+    $scope.showPhoto = function (index) {
+      $scope.photoIndex = index;
+    }
+
 
   }])
   .controller('MyCtrl2', ['$scope', function($scope) {

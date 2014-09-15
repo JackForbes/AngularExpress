@@ -176,14 +176,14 @@ h4 {
   font-weight: 600;
   margin: 0px;
 }
-nav {
-  background: rgba(0,0,0,0.4);
-  text-align: center;
-}
 p {
   margin: 0;
   color: rgba(0,0,0,0.5);
   font-size: 1.1em;
+}
+nav {
+  background: rgba(0,0,0,0.4);
+  text-align: center;
 }
 nav a {
   display: inline-block;
@@ -204,8 +204,9 @@ nav a.active {
   background: rgba(0,0,0,0.3);
 }
 .content {
-  margin: 100px auto;
+  margin: 50px auto;
   width: 70%;
+  max-width: 1200px;
   background: rgba(0,0,0,0.4);
   display: block;
   color: #fff;
@@ -261,7 +262,7 @@ nav a.active {
 }
 .job-header {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
   align-content: center;
@@ -429,7 +430,7 @@ nav a.active {
   display: inline-block;
   width: 250px;
   height: auto;
-  background-color: #393630;
+  background: url('../img/grey-texture.png') repeat left top;
   padding: 5px;
   margin: 5px;
   -webkit-animation: fadeIn 2s;
@@ -457,6 +458,7 @@ nav a.active {
 }
 .interests-activities > div {
   margin: 30px 0;
+  position: relative;
 }
 .interests-activities img {
   position: relative;
@@ -464,23 +466,44 @@ nav a.active {
   height: 90px;
   border-radius: 50%;
 }
-.interests-activities img:hover, .interests-activities img.active {
-  box-shadow: 0px 0px 20px rgba(256,256,256, 0.5);
+.interests-activities img:hover, .interests-activities .active img {
   -webkit-box-shadow: 0px 0px 20px rgba(256,256,256, 0.5);
   -moz-box-shadow: 0px 0px 20px rgba(256,256,256, 0.5);
+  box-shadow: 0px 0px 20px rgba(256,256,256, 0.5);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  transform: scale(1.1);
   cursor: pointer;
+}
+.interests-activities .active::after {
+  content: "";
+  position: absolute;
+  top: 45%;
+  right: -10px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #555;
 }
 .interests-description {
   flex: 8 8 auto;
-  padding: 30px 10px;
+  margin: 30px 20px 30px 10px;
+  padding: 10px;
   -webkit-animation: fadeIn 2s;
   -moz-animation: fadeIn 2s;
   -ms-animation: fadeIn 2s;
+  background: url('../img/grey-texture.png') repeat left top;
 }
-.interests-description img {
-  width: 40%;
+.ea-team-container {
+  text-align: center;
+  margin: 10px 0;
+}
+.ea-team {
   height: auto;
+  max-width: 90%;
 }
+
 
 /* 404 */
 #wordsearch {
@@ -547,7 +570,15 @@ nav a.active {
   border-radius: 50%;
 }
 
-/* ==|== media queries ====================================================== PLACEHOLDER Media Queries for Responsive Design. These override the primary ('mobile first') styles Modify as content requires. ========================================================================== */
+/* Media Queries for Responsive Design */
+@media only screen and (min-width: 1650px) {
+  /* Style adjustments for viewports 1880px and over go here */
+  .quotes {
+    -webkit-column-count: 4;
+    -moz-column-count:    4;
+    column-count:         4;
+  }
+}
 @media only screen and (max-width: 1150px) {
   /* Style adjustments for viewports 1150px and under go here */
   .quotes {
@@ -593,13 +624,12 @@ nav a.active {
     background-size: auto 330px;
   }
   .banner-location {
-  position: absolute;
-  top: 300px;
-  right: 20px;
+    display: none;
   }
   nav a {
     font-size: 1.2em;
     padding: 4px 6px;
+    margin: 10px;
     border-radius: 4px;
   }
   .content {
