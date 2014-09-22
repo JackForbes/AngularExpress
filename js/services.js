@@ -284,18 +284,19 @@ angular.module('myApp.services', []).
     };
   }])
   .service('skrollrService', ['$q', '$rootScope',
-    function($q, $rootScope){
+    function($q, $rootScope) {
 
       var defer = $q.defer();
 
       function onScriptLoad() {
-        // Load client in the browser
-        $rootScope.$apply(function() {
-          var s = skrollr.init({
-            forceHeight: false
+        if ($(window).width() > 767) {
+          $rootScope.$apply(function() {
+            var s = skrollr.init({
+              forceHeight: false
+            });
+            defer.resolve(s);
           });
-          defer.resolve(s);
-        });
+        }
       }
 
       // Create a script tag with skrollr as the source and call

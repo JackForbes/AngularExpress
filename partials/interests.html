@@ -20,16 +20,17 @@
     <div ng-switch on="interestsTab">
       <div class="animate-switch" ng-switch-when="soccer">
 
-        <div class="container slider">
-          <img ng-repeat="photo in SiteModel.photoGallery.soccer" class="photo" ng-show="isActivePhoto($index)" ng-src="{{photo.src}}" />
+        <div class="container slider"
+          ng-swipe-left="showNextPhoto(SiteModel.photoGallery.soccer.length)"
+          ng-swipe-right="showPrevPhoto(SiteModel.photoGallery.soccer.length)">
+          <img ng-repeat="photo in SiteModel.photoGallery.soccer"
+            class="photo"
+            ng-show="isActivePhoto($index)"
+            ng-src="{{photo.src}}" />
           <a class="arrow prev" href=""
-            ng-click="showPrevPhoto(SiteModel.photoGallery.soccer.length)"
-            ng-swipe-right="showPrevPhoto(SiteModel.photoGallery.soccer.length)"
-            ></a>
+            ng-click="showPrevPhoto(SiteModel.photoGallery.soccer.length)"></a>
           <a class="arrow next" href=""
-            ng-click="showNextPhoto(SiteModel.photoGallery.soccer.length)"
-            ng-swipe-left="showNextPhoto(SiteModel.photoGallery.soccer.length)"
-            ></a>
+            ng-click="showNextPhoto(SiteModel.photoGallery.soccer.length)"></a>
           <ul class="thumbnails">
             <li ng-repeat="photo in SiteModel.photoGallery.soccer" ng-class="{'active':isActivePhoto($index)}">
               <img ng-src="{{photo.src}}" alt="{{photo.desc}}" title="{{photo.desc}}" ng-click="showPhoto($index)" />
@@ -43,16 +44,17 @@
       </div>
       <div class="animate-switch" ng-switch-when="skiing">
 
-        <div class="container slider">
-          <img ng-repeat="photo in SiteModel.photoGallery.skiing" class="photo" ng-show="isActivePhoto($index)" ng-src="{{photo.src}}" />
+        <div class="container slider"
+          ng-swipe-left="showNextPhoto(SiteModel.photoGallery.skiing.length)"
+          ng-swipe-right="showPrevPhoto(SiteModel.photoGallery.skiing.length)">
+          <img ng-repeat="photo in SiteModel.photoGallery.skiing"
+            class="photo"
+            ng-show="isActivePhoto($index)"
+            ng-src="{{photo.src}}" />
           <a class="arrow prev" href=""
-            ng-click="showPrevPhoto(SiteModel.photoGallery.skiing.length)"
-            ng-swipe-right="showPrevPhoto(SiteModel.photoGallery.skiing.length)"
-            ></a>
+            ng-click="showPrevPhoto(SiteModel.photoGallery.skiing.length)"></a>
           <a class="arrow next" href=""
-            ng-click="showNextPhoto(SiteModel.photoGallery.skiing.length)"
-            ng-swipe-left="showNextPhoto(SiteModel.photoGallery.skiing.length)"
-            ></a>
+            ng-click="showNextPhoto(SiteModel.photoGallery.skiing.length)"></a>
           <ul class="thumbnails">
             <li ng-repeat="photo in SiteModel.photoGallery.skiing" ng-class="{'active':isActivePhoto($index)}">
               <img ng-src="{{photo.src}}" alt="{{photo.desc}}" title="{{photo.desc}}" ng-click="showPhoto($index)" />
@@ -64,16 +66,17 @@
       </div>
       <div class="animate-switch" ng-switch-when="tennis">
 
-        <div class="container slider">
-          <img ng-repeat="photo in SiteModel.photoGallery.tennis" class="photo" ng-show="isActivePhoto($index)" ng-src="{{photo.src}}" />
+        <div class="container slider"
+          ng-swipe-right="showPrevPhoto(SiteModel.photoGallery.tennis.length)"
+          ng-swipe-left="showNextPhoto(SiteModel.photoGallery.tennis.length)">
+          <img ng-repeat="photo in SiteModel.photoGallery.tennis"
+            class="photo"
+            ng-show="isActivePhoto($index)"
+            ng-src="{{photo.src}}" />
           <a class="arrow prev" href=""
-            ng-click="showPrevPhoto(SiteModel.photoGallery.tennis.length)"
-            ng-swipe-right="showPrevPhoto(SiteModel.photoGallery.tennis.length)"
-            ></a>
+            ng-click="showPrevPhoto(SiteModel.photoGallery.tennis.length)"></a>
           <a class="arrow next" href=""
-            ng-click="showNextPhoto(SiteModel.photoGallery.tennis.length)"
-            ng-swipe-left="showNextPhoto(SiteModel.photoGallery.tennis.length)"
-            ></a>
+            ng-click="showNextPhoto(SiteModel.photoGallery.tennis.length)"></a>
           <ul class="thumbnails">
             <li ng-repeat="photo in SiteModel.photoGallery.tennis" ng-class="{'active':isActivePhoto($index)}">
               <img ng-src="{{photo.src}}" alt="{{photo.desc}}" title="{{photo.desc}}" ng-click="showPhoto($index)" />
