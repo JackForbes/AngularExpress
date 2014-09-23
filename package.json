@@ -1,9 +1,9 @@
 {
-  "name": "AngularExpress",
+  "name": "JackForbes.net",
   "private": true,
   "version": "0.0.1",
   "description": "My AngularJS App",
-  "repository": "https://github.com/JackForbes/AngularExpress",
+  "repository": "https://github.com/JackForbes/JackForbes.net",
   "license": "MIT",
   "devDependencies": {
     "karma": "~0.10",

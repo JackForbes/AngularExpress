@@ -98,6 +98,33 @@ angular.module('myApp.services', []).
           description: 'During the 2012 winter school term, a classmate and I conceptualized a music recommendation system that we called “NextBestSong”. For our first co-op term we were accepted into the Enterprise Co-op program at the University of Waterloo. Although we were the youngest of the 15 groups accepted, we taught ourselves the necessary languages to develop the application. My classmate and I, along with a USC student and a former Microsoft employee, worked on the music recommendation application, to create a complex back end and user friendly front end. By the end of the term we were not ready to realease a Beta version and have put the project on hold since.'
         }
       ],
+      projects: [
+        {
+          iconSrc: 'img/projects/Greeze.png',
+          href: 'https://chrome.google.com/webstore/detail/myo-internet-browsing/jppipfjlphmfmcdckheaflljahlddone',
+          description: "This is my group's submission for our Hack The North hackathon project. I built a Chrome extension that allows for easy navigation of popular sites. Combined with the Myo script, users can navigate the supported sites with basic hand gestures. So you can easily eat while browsing!"
+        },
+        {
+          iconSrc: 'img/projects/UW_Athletic_Scheduler.png',
+          href: 'http://msci-showcase.uwaterloo.ca/~j2forbes/',
+          description: 'This is a class project for one of my database courses in my third year at the University of Waterloo. This is an athletic facility scheduling app that assists students and faculty in determining when to use the athletic facilities on campus. Users can view free times for different sports, along with usage statistics for workout rooms.'
+        },
+        {
+          iconSrc: 'img/projects/NHL_Logo.png',
+          href: 'https://github.com/JackForbes/NHL',
+          description: 'This is a class project for one of my database courses in my second year at the University of Waterloo. This is a "fantasy NHL" app that lets users manipulate a database containing 2012 Stanley Cup NHL players. Users can view stats, as well as insert, modify, and delete players.'
+        },
+        {
+          iconSrc: 'img/projects/Music.png',
+          href: 'https://github.com/JackForbes/musicmatrix',
+          description: 'This is a small app built with some friends during one of my work terms in Vancouver. It allows users to create sound patterns by selecting tiles within a grid. This was built using HTML5 so the sounds are not the most pleasant to hear...'
+        },
+        {
+          iconSrc: 'img/projects/NBS.jpg',
+          href: '',
+          description: 'This is the application a classmate and I were envisioning during our first work term at the University of Waterloo. Although we have yet to release a Beta version, we have learned much from the work we put in. Sorry for not having a link!'
+        }
+      ],
       interests: [
         {
           name: 'soccer',

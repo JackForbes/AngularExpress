@@ -1,26 +1,17 @@
 <div class="web-dev">
   <h3 class="header">Web Development</h3>
   <div class="projects">
-    <div class="project athletic-scheduler">
-      <div class="project-description">
-        Class project for one of my database courses in my third year at the University of Waterloo. This is an athletic facility scheduling app that assists students and faculty in determining when to use the athletic facilities on campus. Available free times for different sports, along with usage statistics for workout rooms are displayed.
+    <div ng-repeat="project in SiteModel.projects" class="project">
+      <a ng-href="{{project.href}}" target="_blank">
+        <img class="project-icon" ng-src="{{project.iconSrc}}">
+      </a>
+      <div>
+        <img class="project-arrow"
+          src="img/projects/down_arrow.png"
+          ng-click="show = !show"
+          ng-class="{'rotate': show}">
       </div>
-    </div>
-    <div class="project nhl" title="Sorry no link right now">
-      <div class="project-description">
-        Class project for one of my database courses in my second year at the University of Waterloo. This is a 'fantasy NHL' app that lets users manipulate a database containing 2012 Stanley Cup NHL players. Users can view stats, as well as insert, modify, and delete players.
-      </div>
-    </div>
-    <div class="project music-matrix" title="Sorry no link right now">
-      <div class="project-description">
-        A small app built with some friends during one of my work terms in Vancouver. It allows users to create sound patterns by selecting tiles within a grid. This was built using HTML5 so the sounds are not the most pleasant to hear...
-      </div>
-    </div>
-    <div class="project next-best-song" title="Sorry no link right now">
-      <div class="project-description">
-        The application a classmate and I were envisioning during our first work term at the University of Waterloo. Although we have yet to release a Beta version, we have learned much from the work we put in.
-      </div>
+      <div class="project-description" ng-show="show">{{project.description}}</div>
     </div>
   </div>
 </div>
-

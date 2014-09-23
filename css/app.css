@@ -103,8 +103,6 @@ img {
   border: 0;
   -ms-interpolation-mode: bicubic;
   vertical-align: middle;
-  height: 50px;
-  margin-right: 20px;
 }
 .banner {
   position: absolute;
@@ -244,6 +242,10 @@ nav a.active {
   font-family: 'Raleway', sans-serif;
   margin-bottom: 20px;
 }
+.header img {
+  height: 50px;
+  margin-right: 20px;
+}
 .sub-header {
   font-weight: 400;
   text-align: left;
@@ -358,41 +360,45 @@ nav a.active {
   font-family: 'Raleway', sans-serif;
 }
 .projects .project {
-  width: 380px;
-  height: 280px;
+  width: 300px;
+  height: auto;
   display: block;
   position: relative;
   margin: 20px auto;
   padding: 10px;
-  cursor: pointer;
+  text-align: center;
   background-size: 100% 100%;
   -webkit-animation: fadeIn 2s;
   -moz-animation: fadeIn 2s;
   -ms-animation: fadeIn 2s;
 }
-.project:hover {
-  -webkit-box-shadow: 0 0 8px 0 #FFF;
-  box-shadow: 0 0 8px 0 #FFF;
+.project-icon {
+  cursor: pointer;
+  height: 150px;
+}
+.project-arrow {
+  height: auto;
+  width: auto;
+  margin: 10px;
+  cursor: pointer;
+  -webkit-transition: 0.25s ease-in;
+  -moz-transition: 0.25s ease-in;
+  -o-transition: 0.25s ease-in;
+  transition: 0.25s ease-in;
+}
+.rotate {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 .project-description {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0,0,0,0.8);
-  border-radius: 3px;
+  background: transparent;
   padding: 5px;
-}
-.athletic-scheduler {
-  background: url('../img/AthleticScheduler.png');
-}
-.nhl {
-  background: url('../img/NHL.png');
-}
-.music-matrix {
-  background: url('../img/MusicMatrix.png');
-}
-.next-best-song {
-  background: url('../img/NextBestSong.png');
+  -webkit-animation: fadeIn 2s;
+  -moz-animation: fadeIn 2s;
+  -ms-animation: fadeIn 2s;
 }
 
 
