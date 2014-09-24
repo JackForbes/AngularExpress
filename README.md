@@ -1,4 +1,4 @@
-AngularExpress
+Jack Forbes
 ==============
 
-App made using Express and Angular
+My personal site made with Angular - my favourite framework on the planet
