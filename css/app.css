@@ -372,11 +372,15 @@ nav a.active {
   -moz-animation: fadeIn 2s;
   -ms-animation: fadeIn 2s;
 }
+.project:hover .project-arrow {
+  visibility: visible;
+}
 .project-icon {
   cursor: pointer;
   height: 150px;
 }
 .project-arrow {
+  visibility: hidden;
   height: auto;
   width: auto;
   margin: 10px;
