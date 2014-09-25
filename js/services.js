@@ -111,7 +111,7 @@ angular.module('myApp.services', []).
         },
         {
           iconSrc: 'img/projects/NHL_Logo.png',
-          href: 'https://JackForbes.github.io/DBProject.html',
+          href: 'http://JackForbes.github.io/DBProject.html',
           description: 'This is a class project for one of my database courses in my second year at the University of Waterloo. This is a "fantasy NHL" app that lets users manipulate a database containing 2012 Stanley Cup NHL players. Users can view stats, as well as insert, modify, and delete players.'
         },
         {
@@ -176,7 +176,7 @@ angular.module('myApp.services', []).
         ],
         skiing: [
           {
-            src: 'img/interests/skiing/Family-Skiing.jpeg',
+            src: 'img/interests/skiing/Family-Skiing.jpg',
             desc: 'Family Whistler Skiing'
           },
           {
