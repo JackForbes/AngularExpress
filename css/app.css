@@ -518,7 +518,7 @@ nav a.active {
 
 /* 404 */
 #wordsearch {
-  width: 45%;
+  width: 450px;
   margin: 0 auto;
   font-family: 'Source Sans Pro', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -545,8 +545,7 @@ nav a.active {
   color: rgba(255,255,255,0.7);
   text-transform: uppercase;
   overflow: hidden;
-  font-size: 24px;
-  font-size: 1.3vw;
+  font-size: 16px;
   font-weight: 300;
   transition: background-color 0.75s ease;
   -moz-transition: background-color 0.75s ease;
@@ -660,5 +659,8 @@ nav a.active {
   .projects .project {
     width: 280px;
     height: 180px;
+  }
+  #wordsearch {
+    width: 320px;
   }
 }
