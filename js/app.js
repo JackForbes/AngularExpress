@@ -40,7 +40,7 @@ config(['$routeProvider', '$locationProvider', function($routeProvider, $locatio
     controller: 'PageCtrl'
   });
   $routeProvider.otherwise({
-    redirectTo: '/',
+    redirectTo: '/Experience',
     templateUrl: 'partials/experience.html',
     controller: 'PageCtrl'
   });
