@@ -45,5 +45,5 @@ config(['$routeProvider', '$locationProvider', function($routeProvider, $locatio
     controller: 'PageCtrl'
   });
 
-  $locationProvider.html5Mode(true);
+  // $locationProvider.html5Mode(true);
 }]);
