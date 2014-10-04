@@ -100,6 +100,11 @@ angular.module('myApp.services', []).
       ],
       projects: [
         {
+          iconSrc: 'img/projects/FUT.png',
+          href: 'https://www.easports.com/fifa/ultimate-team/fut/database',
+          description: "This is the app I was fortunate enough to be a part of while working at EA. I mainly assisted with the functionality, developing with AngularJS. The app lets user search and filter for any and all players in FIFA. Users can then click on a player bio to view statistics and characteristics regarding that player."
+        },
+        {
           iconSrc: 'img/projects/Greeze.png',
           href: 'https://chrome.google.com/webstore/detail/myo-internet-browsing/jppipfjlphmfmcdckheaflljahlddone',
           description: "This is my group's submission for our Hack The North hackathon project. I built a Chrome extension that allows for easy navigation of popular sites. Combined with the Myo script, users can navigate the supported sites with basic hand gestures. So you can easily eat while browsing!"
