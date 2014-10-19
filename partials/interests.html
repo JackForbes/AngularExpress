@@ -27,10 +27,13 @@
             class="photo"
             ng-show="isActivePhoto($index)"
             ng-src="{{photo.src}}" />
-          <a class="arrow prev" href=""
-            ng-click="showPrevPhoto(SiteModel.photoGallery.soccer.length)"></a>
-          <a class="arrow next" href=""
-            ng-click="showNextPhoto(SiteModel.photoGallery.soccer.length)"></a>
+            <i class="fa fa-chevron-left fa-3x arrow prev"
+              ng-click="showPrevPhoto(SiteModel.photoGallery.soccer.length)">
+            </i>
+            <i class="fa fa-chevron-right fa-3x arrow next"
+              ng-click="showNextPhoto(SiteModel.photoGallery.soccer.length)">
+            </i>
+          </a>
           <ul class="thumbnails">
             <li ng-repeat="photo in SiteModel.photoGallery.soccer" ng-class="{'active':isActivePhoto($index)}">
               <img ng-src="{{photo.src}}" alt="{{photo.desc}}" title="{{photo.desc}}" ng-click="showPhoto($index)" />
@@ -51,10 +54,12 @@
             class="photo"
             ng-show="isActivePhoto($index)"
             ng-src="{{photo.src}}" />
-          <a class="arrow prev" href=""
-            ng-click="showPrevPhoto(SiteModel.photoGallery.skiing.length)"></a>
-          <a class="arrow next" href=""
-            ng-click="showNextPhoto(SiteModel.photoGallery.skiing.length)"></a>
+          <i class="fa fa-chevron-left fa-3x arrow prev"
+            ng-click="showPrevPhoto(SiteModel.photoGallery.skiing.length)">
+          </i>
+          <i class="fa fa-chevron-right fa-3x arrow next"
+            ng-click="showNextPhoto(SiteModel.photoGallery.skiing.length)">
+          </i>
           <ul class="thumbnails">
             <li ng-repeat="photo in SiteModel.photoGallery.skiing" ng-class="{'active':isActivePhoto($index)}">
               <img ng-src="{{photo.src}}" alt="{{photo.desc}}" title="{{photo.desc}}" ng-click="showPhoto($index)" />
@@ -73,10 +78,12 @@
             class="photo"
             ng-show="isActivePhoto($index)"
             ng-src="{{photo.src}}" />
-          <a class="arrow prev" href=""
-            ng-click="showPrevPhoto(SiteModel.photoGallery.tennis.length)"></a>
-          <a class="arrow next" href=""
-            ng-click="showNextPhoto(SiteModel.photoGallery.tennis.length)"></a>
+          <i class="fa fa-chevron-left fa-3x arrow prev"
+            ng-click="showPrevPhoto(SiteModel.photoGallery.tennis.length)">
+          </i>
+          <i class="fa fa-chevron-right fa-3x arrow next"
+            ng-click="showNextPhoto(SiteModel.photoGallery.tennis.length)">
+          </i>
           <ul class="thumbnails">
             <li ng-repeat="photo in SiteModel.photoGallery.tennis" ng-class="{'active':isActivePhoto($index)}">
               <img ng-src="{{photo.src}}" alt="{{photo.desc}}" title="{{photo.desc}}" ng-click="showPhoto($index)" />

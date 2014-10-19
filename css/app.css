@@ -223,7 +223,7 @@ nav a.active {
 
 
 /* Experience */
-.experience > div, .web-dev > div {
+.experience > div {
   border-radius: 8px;
   padding: 20px;
   margin: 20px 10px;
@@ -250,9 +250,6 @@ nav a.active {
   font-weight: 400;
   text-align: left;
 }
-.inline-block {
-  display: inline-block;
-}
 
 .job {
   background-color: #ccc;
@@ -261,6 +258,9 @@ nav a.active {
   -webkit-animation: fadeIn 2s;
   -moz-animation: fadeIn 2s;
   -ms-animation: fadeIn 2s;
+}
+.job-company {
+  display: inline-block;
 }
 .job-header {
   display: flex;
@@ -284,7 +284,6 @@ nav a.active {
   justify-content: center;
   align-items: flex-start;
   align-content: flex-start;
-  margin: 0 auto;
   background-color: #ccc;
 }
 .skills-header {
@@ -366,7 +365,10 @@ nav a.active {
   position: relative;
   margin: 20px auto;
   padding: 10px;
+  color: rgba(0,0,0,0.9);
   text-align: center;
+  border-radius: 8px;
+  background-color: #ccc;
   background-size: 100% 100%;
   -webkit-animation: fadeIn 2s;
   -moz-animation: fadeIn 2s;
@@ -375,34 +377,76 @@ nav a.active {
 .project:hover .project-arrow {
   visibility: visible;
 }
+.project-title {
+  font-family: 'Raleway', sans-serif;
+}
+.project-link {
+  position: relative;
+}
+.project-link i {
+  display: none;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+.project-link:hover i {
+  display: inline;
+  color: rgba(0,0,0,0.5);
+}
 .project-icon {
   cursor: pointer;
-  height: 150px;
-}
-.project-arrow {
-  visibility: hidden;
-  height: auto;
-  width: auto;
-  margin: 10px;
-  cursor: pointer;
-  -webkit-transition: 0.25s ease-in;
-  -moz-transition: 0.25s ease-in;
-  -o-transition: 0.25s ease-in;
-  transition: 0.25s ease-in;
-}
-.rotate {
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
-  transform: rotate(180deg);
+  height: 120px;
+  margin: 5px;
 }
 .project-description {
-  background: transparent;
+  position: relative;
+  height: auto;
+  overflow: hidden;
+  font-family: 'Open Sans' sans-serif;
   padding: 5px;
   -webkit-animation: fadeIn 2s;
   -moz-animation: fadeIn 2s;
   -ms-animation: fadeIn 2s;
+  background: transparent;
+  cursor: pointer;
+}
+.project-description.faded {
+  height: 40px;
+}
+.faded::before {
+  content: '';
+  position: absolute;
+  top:0;
+  left:0;
+  height: 100%;
+  width: 100%;
+  background: -webkit-linear-gradient(
+      rgba(204, 204, 204, 0) 0%,
+      rgba(204, 204, 204, 1) 100%
+  );
+  background-image: -moz-linear-gradient(
+      rgba(204, 204, 204, 0) 0%,
+      rgba(204, 204, 204, 1) 100%
+  );
+  background-image: -o-linear-gradient(
+      rgba(204, 204, 204, 0) 0%,
+      rgba(204, 204, 204, 1) 100%
+  );
+  background-image: linear-gradient(
+      rgba(204, 204, 204, 0) 0%,
+      rgba(204, 204, 204, 1) 100%
+  );
+  background-image: -ms-linear-gradient(
+      rgba(204, 204, 204, 0) 0%,
+      rgba(204, 204, 204, 1) 100%
+  );
+}
+.project .readMore {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: rgba(0,0,0,0.3);
 }
 
 
@@ -451,6 +495,7 @@ nav a.active {
   font-weight: bold;
   color: #ff9400;
 }
+
 
 /* Interests */
 .interests {
@@ -558,6 +603,7 @@ nav a.active {
   font-weight: 400;
 }
 
+
 /* Footer */
 .footer {
   padding: 10px;
@@ -657,8 +703,8 @@ nav a.active {
     height: 50px;
   }
   .projects .project {
-    width: 280px;
-    height: 180px;
+    width: 260px;
+    margin: 10px 0;
   }
   #wordsearch {
     width: 320px;

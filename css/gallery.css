@@ -6,26 +6,19 @@
     outline: medium none;
     position: absolute;
     top: 50%;
-    width: 64px;
+    color: #FFF;
+    opacity: 0.2;
     z-index: 5;
+    transition: all 0.2s linear 0s;
 }
 .arrow.prev {
-    background-image: url("../img/interests/prev.png");
     left: 20px;
-    opacity: 0.2;
-    transition: all 0.2s linear 0s;
 }
 .arrow.next {
-    background-image: url("../img/interests/next.png");
-    opacity: 0.2;
     right: 20px;
-    transition: all 0.2s linear 0s;
 }
-.arrow.prev:hover{
-    opacity:1;
-}
-.arrow.next:hover{
-    opacity:1;
+.arrow:hover{
+    opacity: 1;
 }
 .thumbnails {
     bottom: -4px;

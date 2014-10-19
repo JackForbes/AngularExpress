@@ -100,35 +100,47 @@ angular.module('myApp.services', []).
       ],
       projects: [
         {
+          title: 'AngularJS Reddit Client',
+          iconSrc: 'img/projects/Reddit.png',
+          href: 'http://JackForbes.github.io/Pebble',
+          description: "This is a coding challenge I did for Pebble, to create a reddit client using AngularJS. The client allows users to open the Top and New posts for any desired subreddit."
+        },
+        {
+          title: 'EA FIFA Players Database',
           iconSrc: 'img/projects/FUT.png',
           href: 'https://www.easports.com/fifa/ultimate-team/fut/database',
           description: "This is the app I was fortunate enough to be a part of while working at EA. I mainly assisted with the functionality, developing with AngularJS. The app lets user search and filter for any and all players in FIFA. Users can then click on a player bio to view statistics and characteristics regarding that player."
         },
         {
+          title: 'Hack The North Hackathon Project',
           iconSrc: 'img/projects/Greeze.png',
           href: 'https://chrome.google.com/webstore/detail/myo-internet-browsing/jppipfjlphmfmcdckheaflljahlddone',
           description: "This is my group's submission for our Hack The North hackathon project. I built a Chrome extension that allows for easy navigation of popular sites. Combined with the Myo script, users can navigate the supported sites with basic hand gestures. So you can easily eat while browsing!"
         },
         {
+          title: 'Information Systems Design Course Project',
           iconSrc: 'img/projects/UW_Athletic_Scheduler.png',
           href: 'http://msci-showcase.uwaterloo.ca/~j2forbes/',
           description: 'This is a class project for one of my database courses in my third year at the University of Waterloo. This is an athletic facility scheduling app that assists students and faculty in determining when to use the athletic facilities on campus. Users can view free times for different sports, along with usage statistics for workout rooms.'
         },
         {
+          title: 'Database Systems Course Project',
           iconSrc: 'img/projects/NHL_Logo.png',
           href: 'http://JackForbes.github.io/DBProject.html',
           description: 'This is a class project for one of my database courses in my second year at the University of Waterloo. This is a "fantasy NHL" app that lets users manipulate a database containing 2012 Stanley Cup NHL players. Users can view stats, as well as insert, modify, and delete players.'
         },
         {
+          title: 'Music Grid Project',
           iconSrc: 'img/projects/Music.png',
           href: 'https://github.com/JackForbes/musicmatrix',
           description: 'This is a small app built with some friends during one of my work terms in Vancouver. It allows users to create sound patterns by selecting tiles within a grid. This was built using HTML5 so the sounds are not the most pleasant to hear...'
         },
-        {
-          iconSrc: 'img/projects/NBS.jpg',
-          href: '',
-          description: 'This is the application a classmate and I were envisioning during our first work term at the University of Waterloo. Although we have yet to release a Beta version, we have learned much from the work we put in. Sorry for not having a link!'
-        }
+        // {
+        //   title: 'NextBestSong Music Recommendation',
+        //   iconSrc: 'img/projects/NBS.jpg',
+        //   href: '',
+        //   description: 'This is the application a classmate and I were envisioning during our first work term at the University of Waterloo. Although we have yet to release a Beta version, we have learned much from the work we put in. Sorry for not having a link!'
+        // }
       ],
       interests: [
         {
