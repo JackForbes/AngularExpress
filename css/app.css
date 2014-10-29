@@ -612,7 +612,6 @@ nav a.active {
 }
 .footer a {
   display: inline-block;
-  font-family: 'Raleway', sans-serif;
   text-decoration: none;
 }
 .linked-in::before {
@@ -693,9 +692,6 @@ nav a.active {
     width: 80%;
     font-size: 1em;
     padding: 10px 30px;
-  }
-  .footer a {
-    font-size: 0.8em;
   }
 
   .interests-activities img {

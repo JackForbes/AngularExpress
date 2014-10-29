@@ -32,11 +32,12 @@ angular.module('myApp.controllers', [])
       $scope.markers = [];
       var infoWindow = new google.maps.InfoWindow();
 
-      var createMarker = function (info){
+      var createMarker = function (info) {
         var marker = new google.maps.Marker({
-          map: $scope.map,
           position: new google.maps.LatLng(info.lat, info.long),
-          title: info.city
+          map: $scope.map,
+          icon: info.iconSrc,
+          title: info.company
         });
         marker.content = '<div class="infoWindowContent">' + info.desc + '</div>';
 
@@ -48,7 +49,7 @@ angular.module('myApp.controllers', [])
         $scope.markers.push(marker);
       }
 
-      for (var i = 0; i < SiteModel.cities.length; i++){
+      for (var i = 0; i < SiteModel.cities.length; i++) {
         createMarker(SiteModel.cities[i]);
       }
     });

@@ -226,28 +226,39 @@ angular.module('myApp.services', []).
       },
       cities: [
         {
-          city : 'Enterprise Co-op',
-          desc : 'Founder NextBestSolutions',
-          lat : 43.47229,
-          long : -80.54486
+          company: 'Enterprise Co-op',
+          desc: 'Founder NextBestSolutions',
+          lat: 43.47229,
+          long: -80.54486,
+          iconSrc: 'img/icons/Conrad.png'
         },
         {
-          city : 'BC Hydro',
-          desc : 'Project Management',
-          lat : 49.28203,
-          long : -123.11257
+          company: 'BC Hydro',
+          desc: 'Project Management',
+          lat: 49.28203,
+          long: -123.11257,
+          iconSrc: 'img/icons/BC-Hydro.png'
         },
         {
-          city : 'Electronic Arts',
-          desc : 'Software Engineer',
-          lat : 49.24773,
-          long : -123.00974
+          company: 'Electronic Arts',
+          desc: 'Software Engineer',
+          lat: 49.24773,
+          long: -123.00974,
+          iconSrc: 'img/icons/EA-Sports.png'
         },
         {
-          city : 'Gumstix Inc',
-          desc : 'Growth Hacker',
-          lat : 37.50636,
-          long : -122.21108
+          company: 'Gumstix Inc',
+          desc: 'Growth Hacker',
+          lat: 37.50636,
+          long: -122.21108,
+          iconSrc: 'img/icons/Gumstix.png'
+        },
+        {
+          company: 'Zazzle',
+          desc: 'UI Software Engineer',
+          lat: 37.510643,
+          long: -122.2015,
+          iconSrc: 'img/icons/Zazzle.png'
         }
       ],
       quotes: [
