@@ -100,6 +100,12 @@ angular.module('myApp.services', []).
       ],
       projects: [
         {
+          title: 'Audyo - Software Course Project',
+          iconSrc: 'img/projects/Audyo.png',
+          href: 'http://audyo.me',
+          description: "This is a project I did for my Software Engineering course project in Fall, 2014. It is an idiosyncratic music app that is built with Mean.js."
+        },
+        {
           title: 'AngularJS Reddit Client',
           iconSrc: 'img/projects/Reddit.png',
           href: 'http://JackForbes.github.io/Pebble',
@@ -129,12 +135,12 @@ angular.module('myApp.services', []).
           href: 'http://JackForbes.github.io/DBProject.html',
           description: 'This is a class project for one of my database courses in my second year at the University of Waterloo. This is a "fantasy NHL" app that lets users manipulate a database containing 2012 Stanley Cup NHL players. Users can view stats, as well as insert, modify, and delete players.'
         },
-        {
-          title: 'Music Grid Project',
-          iconSrc: 'img/projects/Music.png',
-          href: 'https://github.com/JackForbes/musicmatrix',
-          description: 'This is a small app built with some friends during one of my work terms in Vancouver. It allows users to create sound patterns by selecting tiles within a grid. This was built using HTML5 so the sounds are not the most pleasant to hear...'
-        },
+        // {
+        //   title: 'Music Grid Project',
+        //   iconSrc: 'img/projects/Music.png',
+        //   href: 'https://github.com/JackForbes/musicmatrix',
+        //   description: 'This is a small app built with some friends during one of my work terms in Vancouver. It allows users to create sound patterns by selecting tiles within a grid. This was built using HTML5 so the sounds are not the most pleasant to hear...'
+        // },
         // {
         //   title: 'NextBestSong Music Recommendation',
         //   iconSrc: 'img/projects/NBS.jpg',
