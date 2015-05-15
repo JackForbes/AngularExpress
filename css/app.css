@@ -259,8 +259,10 @@ nav a.active {
   -moz-animation: fadeIn 2s;
   -ms-animation: fadeIn 2s;
 }
-.job-company {
-  display: inline-block;
+.job-company-container {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
 }
 .job-header {
   display: flex;

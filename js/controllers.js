@@ -3,7 +3,7 @@
 /* Controllers */
 
 angular.module('myApp.controllers', [])
-  .controller('PageCtrl', ['$scope', '$location', 'SiteModel', function($scope, $location, SiteModel) {
+  .controller('PageCtrl', ['$scope', '$location', '$timeout', 'SiteModel', function($scope, $location, $timeout, SiteModel) {
     $scope.initialize = function() {
       $scope.SiteModel = SiteModel;
       $scope.setInterestsTab('soccer');
@@ -21,14 +21,18 @@ angular.module('myApp.controllers', [])
       $scope.photoIndex = 0;
     };
 
-    $scope.$on('$viewContentLoaded', function() {
+    $timeout(function() {
+      var mapCanvas = document.getElementById('map-canvas');
+      if (!mapCanvas || $scope.markers) {
+        return;
+      }
       var mapOptions = {
           zoom: 4,
           center: new google.maps.LatLng(41.5000, -102.0000),
           mapTypeId: google.maps.MapTypeId.TERRAIN
       }
 
-      $scope.map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+      $scope.map = new google.maps.Map(mapCanvas, mapOptions);
       $scope.markers = [];
       var infoWindow = new google.maps.InfoWindow();
 
@@ -52,7 +56,7 @@ angular.module('myApp.controllers', [])
       for (var i = 0; i < SiteModel.cities.length; i++) {
         createMarker(SiteModel.cities[i]);
       }
-    });
+    }, 0);
 
     $scope.openInfoWindow = function(e, selectedMarker){
       e.preventDefault();
@@ -63,8 +67,6 @@ angular.module('myApp.controllers', [])
       var selectedIndices = [12,13,14,26,27,28,29,33,34,35,49,50,51,52,53];
       return selectedIndices.indexOf(index) > -1;
     }
-
-
 
     $scope.photoIndex = 0;
 
@@ -91,9 +93,5 @@ angular.module('myApp.controllers', [])
     $scope.showPhoto = function (index) {
       $scope.photoIndex = index;
     }
-
-
-  }])
-  .controller('MyCtrl2', ['$scope', function($scope) {
 
   }]);

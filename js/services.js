@@ -40,6 +40,10 @@ angular.module('myApp.services', []).
           value: 95,
         },
         {
+          label: 'Material Design',
+          value: 90,
+        },
+        {
           label: 'AngularJS',
           value: 90,
         },
@@ -66,15 +70,26 @@ angular.module('myApp.services', []).
         {
           label: 'PHP',
           value: 60,
+        },
+        {
+          label: 'C#',
+          value: 60,
         }
       ],
       jobs: [
+        {
+          company: 'Zazzle',
+          logo: 'img/logos/Zazzle-Logo.png',
+          date: 'January - May, 2015',
+          position: 'UI Software Engineer',
+          description: 'My most recent co-op term was as a UI Software Engineer at Zazzle in Redwood City, CA. I was in charge of researching, designing, and building two internal applications for Zazzle employees to use. One of the tools was a database configuration tool in which engineers could view all database keys, search for specific ones, and add/edit/delete specific key values. The other tool was a translation tool that allowed the translation team to view untranslated strings based on a set of filters, export them to Excel, import translated strings, and view translated strings based on a set of filters. Both applications used Angular with Material Design within the .NET framework'
+        },
         {
           company: 'Electronic Arts',
           logo: 'img/logos/EA-Sports-Logo.png',
           date: 'May - September, 2014',
           position: 'Software Engineer',
-          description: 'My most recent co-op term was as a Software Engineer at EA Sports in Burnaby, BC. I was a web developer on the Pulse team (internal digital agency), working on online Fifa Ultimate Team content. A majority of my development at EA was with AngularJS, and my immediate love of the language inspired me to make this website using Angular!'
+          description: 'My term as a Software Engineer at EA Sports in Burnaby, BC was phenomenal. I was a web developer on the Pulse team (internal digital agency), working on online Fifa Ultimate Team content. A majority of my development at EA was with AngularJS, and my immediate love of the language inspired me to make this website using Angular!'
         },
         {
           company: 'BC Hydro',
@@ -99,6 +114,12 @@ angular.module('myApp.services', []).
         }
       ],
       projects: [
+        {
+          title: 'Material Design Todo Lists',
+          iconSrc: 'img/projects/Todo.png',
+          href: 'http://jackforbes.github.io/ABL/',
+          description: "This is a todo lists app that I built for a coding challenge. It uses angular-material, a library that combines Material Design with AngularJS."
+        },
         {
           title: 'Audyo - Software Course Project',
           iconSrc: 'img/projects/Audyo.png',
@@ -134,19 +155,7 @@ angular.module('myApp.services', []).
           iconSrc: 'img/projects/NHL_Logo.png',
           href: 'http://JackForbes.github.io/DBProject.html',
           description: 'This is a class project for one of my database courses in my second year at the University of Waterloo. This is a "fantasy NHL" app that lets users manipulate a database containing 2012 Stanley Cup NHL players. Users can view stats, as well as insert, modify, and delete players.'
-        },
-        // {
-        //   title: 'Music Grid Project',
-        //   iconSrc: 'img/projects/Music.png',
-        //   href: 'https://github.com/JackForbes/musicmatrix',
-        //   description: 'This is a small app built with some friends during one of my work terms in Vancouver. It allows users to create sound patterns by selecting tiles within a grid. This was built using HTML5 so the sounds are not the most pleasant to hear...'
-        // },
-        // {
-        //   title: 'NextBestSong Music Recommendation',
-        //   iconSrc: 'img/projects/NBS.jpg',
-        //   href: '',
-        //   description: 'This is the application a classmate and I were envisioning during our first work term at the University of Waterloo. Although we have yet to release a Beta version, we have learned much from the work we put in. Sorry for not having a link!'
-        // }
+        }
       ],
       interests: [
         {

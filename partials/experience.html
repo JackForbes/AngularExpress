@@ -1,5 +1,4 @@
 <div class="experience">
-  <!-- <div d3-bars bar-height="20" bar-padding="5"></div> -->
   <div class="skills" skrollr
     data-bottom-center="background-color:rgb(180,180,180);"
     data-center-center="background-color:rgb(230,230,230);"
@@ -26,8 +25,8 @@
     data-top-center="background-color:rgb(180,180,180); transform:scale(1)">
     <div class="job-header header">
       <div>
-        <div>
-          <h3 class="job-company">{{job.company}}</h3>
+        <div class="job-company-container">
+          <h3>{{job.company}}</h3>
           <img ng-src="{{job.logo}}">
         </div>
         <div class="sub-header">{{job.position}}</div>
@@ -37,8 +36,10 @@
     <p>{{job.description}}</p>
   </div>
   <div id="map-canvas">
-    <div id="class" ng-repeat="marker in markers | orderBy : 'title'">
-      <a href="#" ng-click="openInfoWindow($event, marker)">{{marker.title}}</a>
+    <div>
+      <div id="class" ng-repeat="marker in markers | orderBy : 'title'">
+        <a href="#" ng-click="openInfoWindow($event, marker)">{{marker.title}}</a>
+      </div>
     </div>
   </div>
 </div>
