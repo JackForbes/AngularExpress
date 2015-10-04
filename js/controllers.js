@@ -28,7 +28,7 @@ angular.module('myApp.controllers', [])
       }
       var mapOptions = {
           zoom: 4,
-          center: new google.maps.LatLng(41.5000, -102.0000),
+          center: new google.maps.LatLng(43.0000, -102.0000),
           mapTypeId: google.maps.MapTypeId.TERRAIN
       }
 

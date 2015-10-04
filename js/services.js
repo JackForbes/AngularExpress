@@ -78,11 +78,18 @@ angular.module('myApp.services', []).
       ],
       jobs: [
         {
+          company: 'Nest',
+          logo: 'img/logos/Nest-Logo.png',
+          date: 'August - December, 2015',
+          position: 'Frontend Engineer',
+          description: 'My current co-op term is at Google, specifically Nest, in Palo Alto, CA. Thus far it has been very exciting and the only drawback has been how fast the term has gone by!'
+        },
+        {
           company: 'Zazzle',
           logo: 'img/logos/Zazzle-Logo.png',
           date: 'January - May, 2015',
           position: 'UI Software Engineer',
-          description: 'My most recent co-op term was as a UI Software Engineer at Zazzle in Redwood City, CA. I was in charge of researching, designing, and building two internal applications for Zazzle employees to use. One of the tools was a database configuration tool in which engineers could view all database keys, search for specific ones, and add/edit/delete specific key values. The other tool was a translation tool that allowed the translation team to view untranslated strings based on a set of filters, export them to Excel, import translated strings, and view translated strings based on a set of filters. Both applications used Angular with Material Design within the .NET framework'
+          description: 'During my term at Zazzle in Redwood City, CA, I was in charge of researching, designing, and building two internal applications for Zazzle employees to use. One of the tools was a database configuration tool in which engineers could view all database keys, search for specific ones, and add/edit/delete specific key values. The other tool was a translation tool that allowed the translation team to view untranslated strings based on a set of filters, export them to Excel, import translated strings, and view translated strings based on a set of filters. Both applications used Angular with Material Design within the .NET framework'
         },
         {
           company: 'Electronic Arts',
@@ -114,6 +121,12 @@ angular.module('myApp.services', []).
         }
       ],
       projects: [
+        {
+          title: 'Nest Developers',
+          iconSrc: 'img/projects/Nest.png',
+          href: 'https://developer.nest.com',
+          description: "This is the main site that I am currently working on at Nest. I am mainly helping with the UI and Ember portions, especially making sure the site is very responsive."
+        },
         {
           title: 'Material Design Todo Lists',
           iconSrc: 'img/projects/Todo.png',
@@ -274,6 +287,13 @@ angular.module('myApp.services', []).
           lat: 37.510643,
           long: -122.2015,
           iconSrc: 'img/icons/Zazzle.png'
+        },
+        {
+          company: 'Nest',
+          desc: 'Frontend Engineer',
+          lat: 37.404155,
+          long: -122.148124,
+          iconSrc: 'img/icons/Nest.png'
         }
       ],
       quotes: [
