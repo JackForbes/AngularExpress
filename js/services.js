@@ -298,6 +298,14 @@ angular.module('myApp.services', []).
       ],
       quotes: [
         {
+          text: "When you complain, you make yourself a victim. Leave the situation, change the situation, or accept it. All else is madness.",
+          author: 'Eckhart Tolle'
+        },
+        {
+          text: "If you trust in yourself, and believe in your dreams, and follow your star... you'll still get beaten by people who spent their time working hard, and learning things, and weren't so lazy.",
+          author: 'Terry Pratchett'
+        },
+        {
           text: "[Man] sacrifices his health in order to make money. Then he sacrifices money to recuperate his health. And then he is so anxious about the future that he does not enjoy the present; the result being that he does not live in the present or the future; he lives as if he is never going to die, and then dies having never really lived.",
           author: 'Dalai Lama'
         },
