@@ -15,23 +15,23 @@ config(['$routeProvider', '$locationProvider', function($routeProvider, $locatio
     templateUrl: 'partials/experience.html',
     controller: 'PageCtrl'
   });
-  $routeProvider.when('/Experience', {
+  $routeProvider.when('/experience', {
     templateUrl: 'partials/experience.html',
     controller: 'PageCtrl'
   });
-  $routeProvider.when('/Web-Dev', {
-    templateUrl: 'partials/web-dev.html',
+  $routeProvider.when('/projects', {
+    templateUrl: 'partials/projects.html',
     controller: 'PageCtrl'
   });
-  $routeProvider.when('/Resume', {
+  $routeProvider.when('/resume', {
     templateUrl: 'partials/resume.html',
     controller: 'PageCtrl'
   });
-  $routeProvider.when('/Favourites', {
-    templateUrl: 'partials/favourites.html',
+  $routeProvider.when('/quotes', {
+    templateUrl: 'partials/quotes.html',
     controller: 'PageCtrl'
   });
-  $routeProvider.when('/Interests', {
+  $routeProvider.when('/interests', {
     templateUrl: 'partials/interests.html',
     controller: 'PageCtrl'
   });
@@ -40,7 +40,7 @@ config(['$routeProvider', '$locationProvider', function($routeProvider, $locatio
     controller: 'PageCtrl'
   });
   $routeProvider.otherwise({
-    redirectTo: '/Experience',
+    redirectTo: '/experience',
     templateUrl: 'partials/experience.html',
     controller: 'PageCtrl'
   });

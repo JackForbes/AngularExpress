@@ -1,5 +1,4 @@
 <div class="web-dev">
-  <h3 class="header">Web Development</h3>
   <div class="projects">
     <div ng-repeat="project in SiteModel.projects" class="project">
       <h4 class="project-title">{{project.title}}</h4>
@@ -7,7 +6,6 @@
         <a ng-href="{{project.href}}" target="_blank">
           <img class="project-icon" ng-src="{{project.iconSrc}}">
         </a>
-        <i class="fa fa-external-link"></i>
       </div>
       <div class="project-description"
         ng-class="{'faded': !showDescription}"

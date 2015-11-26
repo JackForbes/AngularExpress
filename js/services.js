@@ -6,23 +6,23 @@ angular.module('myApp.services', []).
     return {
       navItems: [
         {
-          href: '#Experience',
+          href: '#experience',
           text: 'Work Experience'
         },
         {
-          href: '#Web-Dev',
+          href: '#projects',
           text: 'Web Development'
         },
         {
-          href: '#Resume',
+          href: '#resume',
           text: 'Resume'
         },
         {
-          href: '#Favourites',
-          text: 'Favourites'
+          href: '#quotes',
+          text: 'Quotes'
         },
         {
-          href: '#Interests',
+          href: '#interests',
           text: 'Interests'
         }
       ],
@@ -82,7 +82,7 @@ angular.module('myApp.services', []).
           logo: 'img/logos/Nest-Logo.png',
           date: 'August - December, 2015',
           position: 'Frontend Engineer',
-          description: 'My current co-op term is at Google, specifically Nest, in Palo Alto, CA. Thus far it has been very exciting and the only drawback has been how fast the term has gone by!'
+          description: 'My last co-op term was at Google, specifically Nest, in Palo Alto, CA. Working for a company I am very passionate about was an incredible experience. I worked on the Developers portal that allows users to utilize the Nest API and submit products to the Works With Nest Store. I worked on the UI, using Ember.js (ES6), including Handlebars and Sass.'
         },
         {
           company: 'Zazzle',
@@ -128,17 +128,23 @@ angular.module('myApp.services', []).
           description: "This is the main site that I am currently working on at Nest. I am mainly helping with the UI and Ember portions, especially making sure the site is very responsive."
         },
         {
+          title: 'YouTube Rotten Tomatoes',
+          iconSrc: 'img/projects/ytrt.png',
+          href: 'https://chrome.google.com/webstore/detail/youtube-rotten-tomatoes/pnhnpfanenbhdkkmigmcmelkgbjkoaoo',
+          description: "This is a Chrome extension I built that allows users to view Rotten Tomatoes scores directly on YouTube trailers!."
+        },
+        {
           title: 'Material Design Todo Lists',
           iconSrc: 'img/projects/Todo.png',
           href: 'http://jackforbes.github.io/ABL/',
           description: "This is a todo lists app that I built for a coding challenge. It uses angular-material, a library that combines Material Design with AngularJS."
         },
-        {
-          title: 'Audyo - Software Course Project',
-          iconSrc: 'img/projects/Audyo.png',
-          href: 'http://audyo.me',
-          description: "This is a project I did for my Software Engineering course project in Fall, 2014. It is an idiosyncratic music app that is built with Mean.js."
-        },
+        // {
+        //   title: 'Audyo - Software Course Project',
+        //   iconSrc: 'img/projects/Audyo.png',
+        //   href: 'http://audyo.me',
+        //   description: "This is a project I did for my Software Engineering course project in Fall, 2014. It is an idiosyncratic music app that is built with Mean.js."
+        // },
         {
           title: 'AngularJS Reddit Client',
           iconSrc: 'img/projects/Reddit.png',
@@ -152,7 +158,7 @@ angular.module('myApp.services', []).
           description: "This is the app I was fortunate enough to be a part of while working at EA. I mainly assisted with the functionality, developing with AngularJS. The app lets user search and filter for any and all players in FIFA. Users can then click on a player bio to view statistics and characteristics regarding that player."
         },
         {
-          title: 'Hack The North Hackathon Project',
+          title: 'Hack The North Project',
           iconSrc: 'img/projects/Greeze.png',
           href: 'https://chrome.google.com/webstore/detail/myo-internet-browsing/jppipfjlphmfmcdckheaflljahlddone',
           description: "This is my group's submission for our Hack The North hackathon project. I built a Chrome extension that allows for easy navigation of popular sites. Combined with the Myo script, users can navigate the supported sites with basic hand gestures. So you can easily eat while browsing!"
