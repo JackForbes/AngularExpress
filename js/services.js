@@ -122,6 +122,12 @@ angular.module('myApp.services', []).
       ],
       projects: [
         {
+          title: 'Hangman',
+          iconSrc: 'img/projects/Hangman.png',
+          href: 'http://JackForbes.github.io/Coursera',
+          description: "This is a coding challenge I did for Coursera. The page allows users to play Hangman using endpoints that hit Coursera's servers."
+        },
+        {
           title: 'Nest Developers',
           iconSrc: 'img/projects/Nest.png',
           href: 'https://developer.nest.com',
@@ -146,7 +152,7 @@ angular.module('myApp.services', []).
         //   description: "This is a project I did for my Software Engineering course project in Fall, 2014. It is an idiosyncratic music app that is built with Mean.js."
         // },
         {
-          title: 'AngularJS Reddit Client',
+          title: 'Reddit Client',
           iconSrc: 'img/projects/Reddit.png',
           href: 'http://JackForbes.github.io/Pebble',
           description: "This is a coding challenge I did for Pebble, to create a reddit client using AngularJS. The client allows users to open the Top and New posts for any desired subreddit."
