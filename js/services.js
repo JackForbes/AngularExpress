@@ -122,6 +122,12 @@ angular.module('myApp.services', []).
       ],
       projects: [
         {
+          title: 'DuDE',
+          iconSrc: 'img/projects/DuDE.png',
+          href: 'https://github.com/zlwaterfield/DuDE',
+          description: "Drag undo Drop Execute. This is an app I built for the Ontario Engineering Competition. The goal is to teach kids the basics of coding."
+        },
+        {
           title: 'Hangman',
           iconSrc: 'img/projects/Hangman.png',
           href: 'http://JackForbes.github.io/Coursera',
