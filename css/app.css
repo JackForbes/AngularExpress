@@ -243,8 +243,9 @@ nav a.active {
   margin-bottom: 20px;
 }
 .header img {
-  height: 50px;
+  max-height: 50px;
   margin-right: 20px;
+  max-width: 200px;
 }
 .sub-header {
   font-weight: 400;
@@ -252,7 +253,7 @@ nav a.active {
 }
 
 .job {
-  background-color: #ccc;
+  background-color: #BDBDBD;
   color: rgba(0,0,0,0.5);
   font-size: 1.1em;
   -webkit-animation: fadeIn 2s;

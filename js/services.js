@@ -78,6 +78,13 @@ angular.module('myApp.services', []).
       ],
       jobs: [
         {
+          company: 'Sequence',
+          logo: 'img/logos/Sequence-Logo.png',
+          date: 'June, 2016 - Present',
+          position: 'Frontend Developer',
+          description: 'I am currently working at Sequence, in San Francisco, CA. As a design and development studio, Sequence encompasses everything that I enjoy doing when it comes to coding. Creating great User Experiences using new and innovative technologies!'
+        },
+        {
           company: 'Nest',
           logo: 'img/logos/Nest-Logo.png',
           date: 'August - December, 2015',
