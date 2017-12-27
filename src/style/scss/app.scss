@@ -1,0 +1,272 @@
+/* IE banner */
+.is-ie .ie-banner {
+  display: block;
+}
+
+.ie-banner {
+  display: none;
+}
+
+/* Toolbar area */
+.site-nav {
+  .md-toolbar-tools {
+    max-width: $lg-width;
+    margin: 0 auto;
+  }
+
+  &.is-transparent {
+    background-color: transparent;
+    border-bottom: none;
+  }
+
+  &.is-hidden {
+    display: none;
+  }
+}
+
+.logo {
+  padding: 12px 0;
+  text-align: left;
+  color: $primary-color;
+
+  md-icon {
+    min-width: 32px;
+    min-height: 32px;
+
+    svg * {
+      color: $primary-color;
+      fill: $primary-color;
+      transition: all $transition-duration $cubic-bezier;
+    }
+    @include gt-xs {
+      min-width: 114px;
+    };
+  }
+  @include toolbar-resize {
+    padding: 8px 0;
+  }
+  @include gt-sm {
+    padding: 12px 0;
+  }
+}
+
+.menu {
+  background-color: transparent;
+  border: none;
+  height: 38px;
+  margin: 16px;
+  width: 36px;
+}
+
+md-toolbar {
+  border-bottom: 1px solid $medium-light-grey;
+
+  h1 {
+    margin: auto;
+  }
+}
+
+.hamburgerMenu {
+  color: rgba(0,0,0,.8);
+}
+
+.toolbar-nav-link.active {
+  height: 100%;
+  padding: 0 $default-spacing;
+  margin: 0;
+  background-color: $hue-1-color;
+  border-bottom: 3px solid $primary-color;
+}
+
+.count-float-right {
+  position: absolute;
+  top: 5px;
+  right: 1px;
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 0 2px;
+  color: $white;
+  background-color: $warn-color;
+  border-radius: 50%;
+}
+
+.toolbar-headshot {
+  width: 30px;
+  height: 30px;
+  line-height: 28px;
+  color: $white;
+}
+
+.notifications-menu {
+  $md-menu-content-max-height: 304px;
+  $view-all-notifications-height: 48px;
+  border-radius: $default-border-radius;
+
+  > div:first-child {
+    max-height: $md-menu-content-max-height - $view-all-notifications-height;
+    overflow-y: auto;
+  }
+
+  .notifications-menu-item {
+    height: auto;
+    max-width: 312px;
+    padding: $default-spacing 0;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $medium-light-grey;
+    }
+  }
+
+  .notifications-button {
+    text-align: center;
+  }
+}
+
+/* Miscellaneous */
+.site-loading-bar {
+  position: fixed;
+  z-index: 1;
+}
+
+.toolbar-no-border {
+  border-bottom: none;
+}
+
+/* Sidenav area */
+.sidenav-item {
+  height: 72px;
+}
+
+/* Email and Contact Dialog */
+.message-label {
+  width: 64px;
+  text-align: right;
+  margin-right: $default-spacing;
+  @include gt-md {
+    width: 80px;
+  };
+}
+
+/* Review Dialog */
+.review-icon {
+  stroke-width: 2px;
+  stroke-dasharray: 80;
+  stroke-dashoffset: 80;
+  cursor: pointer;
+  transition: stroke $transition-duration $cubic-bezier;
+  animation: draw $animation-duration 1 $animation-delay $cubic-bezier forwards;
+
+  path {
+    stroke: $light-grey;
+    fill: transparent;
+    transition: fill $transition-duration $cubic-bezier, stroke $transition-duration $cubic-bezier;
+  }
+
+  &.filled path, &:hover path {
+    stroke: $primary-color;
+    fill: $primary-color;
+  }
+
+  &.outlined path {
+    stroke: $primary-color;
+  }
+}
+
+/* Message Dialog */
+.message-dialog {
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Feedback Dialog */
+.feedback-dialog {
+  width: 400px;
+
+  .input {
+    min-height: 120px;
+  }
+}
+
+/* Toasts */
+md-toast {
+  &:not(.error),
+  md-toast:not(.success) {
+    .md-toast-content {
+      color: $white;
+      background-color: $primary-color;
+    }
+  }
+
+  &.error .md-toast-content {
+    color: $black;
+    background-color: $warn-color;
+  }
+
+  &.success .md-toast-content {
+    color: $white;
+    background-color: $success-color;
+  }
+}
+
+/* Bottom Sheet */
+.bottomSheet .md-grid-item-content {
+  height: 96px;
+}
+
+.bottomSheet .md-grid-item-content md-icon {
+  height: 48px;
+  width: 48px;
+}
+
+.bottomSheet .md-grid-text {
+  padding-bottom: 5px;
+}
+
+/* 404 */
+.not-found {
+  width: 320px;
+  height: 410px;
+  -webkit-font-smoothing: antialiased;
+  -webkit-animation: fadeIn 2s;
+  -moz-animation: fadeIn 2s;
+  -ms-animation: fadeIn 2s;
+  @include gt-xs {
+    width: 450px;
+    height: 454px;
+  };
+
+  li {
+    height: 50px;
+    line-height: 52px;
+    width: 12%;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0 1px 1px 0;
+    padding: 0;
+    text-align: center;
+    color: $light-white;
+    background-color: $extra-light-black;
+    list-style: none;
+    text-transform: uppercase;
+    @include gt-xs {
+      height: 55px;
+      line-height: 55px;
+      margin: 0 2px 2px 0;
+    };
+
+    &.highlight {
+      background-color: $primary-color;
+      color: $white;
+      font-weight: 400;
+    }
+  }
+}
+
+/* Intercom messenger launcher icon */
+#intercom-container .intercom-app {
+  display: none;
+}

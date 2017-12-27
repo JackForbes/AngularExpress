@@ -1,0 +1,7 @@
+<div class="background-accent" layout layout-align="center center" layout-fill>
+  <div class="not-found margin-center">
+    <ul class="margin-none padding-none fill">
+      <li ng-class="{'highlight': ctrl.display.gridLettersHighlightedIndices.indexOf($index) > -1}" ng-repeat='letter in ctrl.display.gridLetters track by $index'>{{ letter }}</li>
+    </ul>
+  </div>
+</div>

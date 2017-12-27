@@ -1,0 +1,402 @@
+// Spacing
+
+p {
+  margin: $default-spacing 0;
+}
+
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+.margin-none {
+  margin: 0;
+}
+
+.margin-auto {
+  margin: auto;
+}
+
+.margin-xs {
+  margin: 2px;
+}
+
+.margin-sm {
+  margin: 6px;
+}
+
+.margin-md {
+  margin: $default-spacing;
+}
+
+.margin-bottom {
+  margin: 0 0 $default-spacing;
+}
+
+.margin-bottom-xxs {
+  margin-bottom: 3px;
+}
+
+.margin-bottom-xs {
+  margin-bottom: 6px;
+}
+
+.margin-bottom-sm {
+  margin-bottom: $default-spacing / 2;
+}
+
+.margin-bottom-lg {
+  margin: 0 0 ($default-spacing * 2) 0;
+}
+
+.margin-top-bottom {
+  margin: $default-spacing 0;
+  @include gt-xs {
+    margin: $default-spacing * 2 0;
+  };
+}
+
+.margin-top-sm {
+  margin: $default-spacing / 2 0 0 0;
+}
+
+.margin-top {
+  margin: $default-spacing 0 0;
+}
+
+.margin-top-md-lt-xs {
+  @include xs {
+    margin: $default-spacing * 1.5 0 0 0;
+  }
+}
+
+.margin-top-md-lt-sm {
+  @include sm {
+    margin: $default-spacing 0 0 0;
+  }
+}
+
+.margin-top-lg {
+  margin: ($default-spacing * 2) 0 0 0;
+}
+
+.margin-top-xl {
+  margin: ($default-spacing * 4) 0 0 0;
+}
+
+.margin-top-xl-lt-sm {
+  @include sm {
+    margin: ($default-spacing * 4) 0 0 0;
+  }
+}
+
+.margin-sides-top {
+  margin: $default-spacing $default-spacing 0;
+}
+
+.margin-top-right-md {
+  margin: $default-spacing $default-spacing 0 0;
+}
+
+.margin-top-lt-xs {
+  @include xs {
+    margin: $default-spacing / 2 0 0 0;
+  }
+}
+
+.margin-top-lg-lt-sm {
+  @include sm {
+    margin: $default-spacing * 2 0 0 0;
+  }
+  @include gt-sm {
+    margin: 0 0 0 $default-spacing * 6;
+  }
+}
+
+.margin-top-xl-lt-xs {
+  @include xs {
+    margin: $default-spacing * 3 0 0 0;
+  }
+}
+
+.margin-top-lt-sm {
+  @include sm {
+    margin: $default-spacing * 3 0 0 0;
+  }
+}
+
+.margin-top-lg-gt-sm {
+  margin: $default-spacing * 3 0 0 0;
+  @include gt-sm {
+    margin: 18px 0 0 0;
+  }
+}
+
+.margin-sides-top-gt-xs {
+  margin: $default-spacing 0 0;
+  @include gt-xs {
+    margin: $default-spacing $default-spacing / 2 0 $default-spacing / 2;
+  }
+}
+
+.margin-sides-top-lg {
+  margin: ($default-spacing * 2) $default-spacing 0 $default-spacing;
+}
+
+.margin-sides-bottom {
+  margin: 0 $default-spacing $default-spacing;
+}
+
+.margin-sides-sm {
+  margin: 0 $default-spacing / 2;
+  @include gt-xs {
+    margin: 0 $default-spacing;
+  }
+}
+
+.margin-sides-sm-gt-xs {
+  margin: 0 !important;
+  @include gt-xs {
+    margin: 0 6px !important;
+  };
+}
+
+.margin-sides {
+  margin: 0 $default-spacing;
+}
+
+.margin-sides-gt-xs {
+  @include gt-xs {
+    margin: 0 $default-spacing;
+  };
+}
+
+.margin-sides-lg {
+  margin: 0 $default-spacing;
+  @include gt-xs {
+    margin: 0 $default-spacing * 2;
+  }
+}
+
+.margin-right-xs {
+  margin: 0 3px 0 0;
+}
+
+.margin-right-sm {
+  margin: 0 10px 0 0;
+}
+
+.margin-right-md {
+  margin-right: $default-spacing;
+}
+
+.margin-right-gt-xs {
+  margin: $default-spacing 0 0 0;
+  @include gt-xs {
+    margin: 0 $default-spacing * 3 0 0;
+  }
+}
+
+.margin-right-xl {
+  margin-right: $default-spacing * 3;
+  @include gt-xs {
+    margin-right: $default-spacing * 6;
+  }
+}
+
+.margin-left-sm {
+  margin: 0 0 0 $default-spacing / 2;
+}
+
+.margin-left-sm-gt-xs {
+  margin: $default-spacing / 2 0 0 0;
+  @include gt-xs {
+    margin: 0 0 0 $default-spacing / 2;
+  }
+}
+
+.margin-left-gt-xs {
+  margin: $default-spacing 0 0 0;
+  @include gt-xs {
+    margin: 0 0 0 $default-spacing;
+  }
+}
+
+.margin-left-sm-gt-sm {
+  margin: $default-spacing / 2 0 0 0;
+  @include gt-sm {
+    margin: 0 0 0 $default-spacing / 2;
+  }
+}
+
+.margin-left-md {
+  margin: 0 0 0 $default-spacing;
+}
+
+.margin-left-lg {
+  margin: 0 0 0 $default-spacing * 2;
+}
+
+.margin-left-lg-gt-xs {
+  margin: $default-spacing 0 0 0;
+  @include gt-xs {
+    margin: 0 0 0 $default-spacing * 2;
+  }
+}
+
+.margin-left-lg-gt-sm {
+  @include gt-sm {
+    margin: 0 0 0 $default-spacing * 2;
+  }
+}
+
+.margin-left-xl {
+  margin: 0 0 0 $default-spacing * 6;
+}
+
+.padding-none {
+  padding: 0;
+}
+
+.padding-xs {
+  padding: $default-spacing / 4;
+}
+
+.padding-sm {
+  padding: $default-spacing / 2;
+}
+
+.padding-sm-gt-xs {
+  @include gt-xs {
+    padding: $default-spacing / 2;
+  };
+}
+
+.padding-md-lg {
+  padding: $default-spacing;
+  @include gt-xs {
+    padding: $default-spacing $default-spacing * 2;
+  }
+}
+
+.padding-none-lg {
+  padding: $default-spacing;
+  @include gt-xs {
+    padding: 0 $default-spacing * 2;
+  }
+}
+
+.padding-md {
+  padding: $default-spacing;
+}
+
+.padding-lg-lg-lg-none {
+  padding: $default-spacing;
+  @include gt-xs {
+    padding: $default-spacing * 2 $default-spacing * 2 $default-spacing * 2 0;
+  }
+}
+
+.padding-lg {
+  padding: $default-spacing;
+  @include gt-xs {
+    padding: $default-spacing * 2;
+  }
+}
+
+.padding-lg-md {
+  padding: $default-spacing;
+  @include gt-xs {
+    padding: $default-spacing * 2 $default-spacing;
+  }
+}
+
+.padding-xl {
+  padding: $default-spacing * 2;
+  @include gt-xs {
+    padding: $default-spacing * 4;
+  }
+}
+
+.padding-top {
+  padding: $default-spacing 0 0;
+}
+
+.padding-top-bottom {
+  padding: $default-spacing 0;
+}
+
+.padding-right {
+  padding: 0 $default-spacing 0 0;
+}
+
+.padding-right-lg-gt-sm {
+  @include gt-sm {
+    padding: 0 $default-spacing * 2 0 0;
+  }
+}
+
+.padding-left-sm {
+  padding: 0 0 0 $default-spacing / 2;
+
+  > label:not(.md-no-float):not(.md-container-ignore) {
+    padding: 0 0 0 $default-spacing / 2;
+  }
+}
+
+.padding-left {
+  padding: 0 0 0 $default-spacing;
+}
+
+.padding-left-sm-gt-xs {
+  @include gt-xs {
+    padding: 0 0 0 $default-spacing / 2;
+  }
+}
+
+.padding-left-sm-gt-sm {
+  @include gt-sm {
+    padding: 0 0 0 $default-spacing / 2;
+  }
+}
+
+.padding-left-lg-gt-xs {
+  @include gt-xs {
+    padding: 0 0 0 $default-spacing * 2;
+  }
+}
+
+.padding-left-lg-gt-sm {
+  @include gt-sm {
+    padding: 0 0 0 $default-spacing * 2;
+  }
+}
+
+.padding-sides {
+  padding: 0 $default-spacing;
+}
+
+.padding-sides-top {
+  padding: ($default-spacing * 2) $default-spacing 0 $default-spacing;
+}
+
+.padding-sides-top-lg {
+  padding: ($default-spacing * 2) $default-spacing $default-spacing $default-spacing;
+}
+
+.padding-bottom-xxs {
+  padding: 0 0 $default-spacing / 4;
+}
+
+.padding-bottom {
+  padding: 0 0 $default-spacing;
+}
+
+.padding-bottom-lg {
+  padding: 0 0 $default-spacing * 2;
+}

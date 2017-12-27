@@ -1,0 +1,386 @@
+// Angular Material component style customization
+
+// Dialog
+md-dialog {
+  @include xs {
+    max-width: calc(100vw - #{$default-spacing * 2});
+    max-height: calc(100vh - #{$default-spacing * 2});
+  }
+  @include gt-sm {
+    max-width: 50%;
+  }
+}
+
+// Cards
+md-card {
+  background-color: inherit;
+  box-shadow: none;
+
+  &:not(.border-none) md-card-content {
+    border: 1px solid $medium-light-grey;
+  }
+
+  md-card-header {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  md-card-actions {
+    margin: 0;
+    padding: $default-spacing;
+    border: 1px solid $medium-light-grey;
+    border-width: 0 1px 1px 1px;
+  }
+}
+
+// Menu
+md-menu-content, md-select-menu, md-select-menu md-content {
+  max-height: 336px;
+}
+
+// Tabs
+md-tabs.md-primary {
+  md-tab-item {
+    color: $white !important;
+  }
+
+  [role="tabpanel"] {
+    transition: none;
+  }
+}
+
+// List items
+md-list-item.md-3-line {
+  .md-avatar,
+  .md-avatar-icon {
+    width: 60px;
+    height: 60px;
+    margin-top: $default-spacing / 2;
+    box-sizing: border-box;
+  }
+
+  .md-avatar-icon svg {
+    width: 44px;
+    height: 44px;
+  }
+
+  .list-item-action.md-icon-button {
+    width: 24px;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+// Buttons
+.md-button {
+  &:not(.md-icon-button, .md-fab, [role='menuitem']) {
+    padding: 0 $default-spacing;
+  }
+
+  &.md-raised:not(.md-fab) {
+    box-shadow: none;
+    transition: transform $transition-duration-lg $cubic-bezier, box-shadow $transition-duration ease;
+
+    &:not(.hover-none):hover {
+      transform: translateY(-.2rem);
+      box-shadow: $box-shadow;
+    }
+
+    &.md-primary {
+      color: $white;
+
+      // TODO: Move this to src/config.js
+      &:not([disabled]):hover {
+        background-color: $hue-6-color;
+      }
+    }
+  }
+
+  &.md-primary.background-white {
+    background-color: $white;
+    border: 1px solid $primary-color;
+
+    &.md-icon-button {
+      border-radius: $default-border-radius;
+    }
+
+    &:hover {
+      background-color: $extra-light-white;
+    }
+
+    &.dashed {
+      border-style: dashed;
+    }
+
+    &.no-border {
+      border: none;
+    }
+
+    &:disabled {
+      border-color: $medium-light-grey;
+
+      md-icon {
+        color: $extra-light-black !important;
+        fill: $extra-light-black !important;
+      }
+    }
+  }
+
+  &.tall {
+    height: 50px;
+  }
+
+  &.md-icon-button.background-white {
+    &.active {
+      color: $white;
+      background-color: $medium-grey;
+      border: 1px solid $medium-grey;
+      cursor: default;
+    }
+    &:not(.active) {
+      color: $primary-color;
+      border: 1px solid $primary-color;
+      &:hover {
+        background-color: $hue-1-color;
+      }
+    }
+  }
+
+  &.md-icon-button.margin-none {
+    margin: 0;
+  }
+
+  &.hover-none:not([role="menuitem"]):hover {
+    background-color: initial;
+  }
+}
+
+md-icon {
+  transition: color $transition-duration $cubic-bezier-button, fill $transition-duration $cubic-bezier-button;
+}
+
+// Inputs
+#body md-input-container {
+  &:not([class*="padding-"]) {
+    padding-left: 0;
+    padding-right: 0;
+
+    label {
+      padding-left: 0;
+    }
+  }
+
+  &.md-input-invalid .md-input-message-animation {
+    color: $warn-color;
+  }
+
+  &.format--currency {
+    position: relative;
+
+    &:after {
+      content: '$';
+      position: absolute;
+      top: 11px;
+      left: $default-spacing / 2;
+    }
+
+    input {
+      padding: 0 0 0 24px;
+    }
+  }
+
+  label {
+    color: $accent-color;
+    transform: none;
+    padding-bottom: $default-spacing / 4;
+
+    &.md-placeholder {
+      top: inherit;
+      opacity: inherit;
+    }
+  }
+
+  .md-input {
+    height: $input-height;
+    line-height: $input-height;
+    padding: $default-spacing / 2;
+    border-color: $medium-light-grey;
+    border-width: 1px;
+    border-radius: $input-border-radius;
+    @include placeholder-color {
+      color: $light-grey;
+    }
+  }
+
+  textarea.md-input {
+    line-height: 24px;
+
+    &.padding-right-lg {
+      padding: $default-spacing / 2 $default-spacing * 3 $default-spacing / 2 $default-spacing / 2;
+    }
+  }
+
+  .md-select-value {
+    padding: 7px 2px 7px $default-spacing / 2;
+    border: 1px solid $medium-light-grey;
+    background-image: none;
+
+    .md-select-icon {
+      &:after, &:before {
+        content: '';
+        position:absolute;
+        right: 2px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-color: transparent;
+        border-left-width: 6px;
+        border-right-width: 6px;
+        border-top-width: 6px;
+        border-radius: 2px;
+      }
+      &:before {
+        top: 1px;
+        border-top-color: $accent-color;
+      }
+      &:after {
+        top: 0;
+        border-top-color: $white;
+        transform: none;
+      }
+    }
+  }
+
+  .md-char-counter {
+    color: $grey;
+  }
+}
+
+// Autocomplete
+#body md-autocomplete {
+  height: $input-height;
+
+  &.format--destination {
+    position: relative;
+
+    // Floating location icon
+    // &:after {
+    //   position: absolute;
+    //   left: 33px;
+    //   content: 'City or town';
+    //   top: 27px;
+    //   color: $grey;
+    // }
+    //
+    // &:focus:after {
+    //   display: none;
+    // }
+
+    input {
+      background: url($image-url + 'svg/map_marker.svg'), $white;
+      background-repeat: no-repeat;
+      background-position: $default-spacing / 2 10px;
+      padding: 0 0 0 32px;
+    }
+  }
+
+  &.has-label input {
+    border: 1px solid $medium-light-grey;
+  }
+
+  &:not(.has-label):not(.border-none) md-autocomplete-wrap {
+    border: 1px solid $medium-light-grey;
+  }
+
+  md-progress-linear.md-inline {
+    bottom: -21px;
+    left: 1px;
+    right: 1px;
+  }
+
+  md-autocomplete-wrap {
+    height: $input-height;
+    border-radius: $input-border-radius;
+    box-shadow: none;
+  }
+
+  input {
+    height: $input-height;
+    font-size: inherit !important;
+    line-height: $input-height;
+    padding: 0 $default-spacing / 2;
+    @include placeholder-color {
+      color: $light-grey;
+    }
+  }
+}
+
+// Radio
+md-radio-group {
+  md-radio-button .md-off, &:not([disabled]).md-primary .md-checked .md-off {
+    border-width: 1px;
+    border-color: $light-grey;
+  }
+
+  md-radio-button.md-checked .md-on {
+    transform: scale(.6);
+  }
+}
+
+// Checkbox
+md-checkbox .md-container:after {
+  display: none;
+}
+
+// Whiteframe components
+.md-open-menu-container, .md-virtual-repeat-container.md-autocomplete-suggestions-container, md-select-menu {
+  box-shadow: none;
+  border: 1px solid $medium-light-grey;
+}
+.md-open-menu-container, md-select-menu {
+  border-radius: $default-border-radius;
+}
+
+// Sidenav
+#body md-sidenav {
+  min-width: 250px;
+  max-width: 250px;
+}
+
+// Chips
+md-chips .md-chips {
+  font-family: inherit;
+  padding: 0 0 $default-spacing / 2 $default-spacing / 2;
+  border: 1px solid $medium-light-grey;
+  border-radius: $input-border-radius;
+  box-shadow: none !important;
+}
+
+// Safari/iOS layout fixes
+// https://github.com/angular/material/issues/10516
+.layout-row.layout-wrap.flex-mins {
+  & > .flex-0 { min-width: 0%; }
+  & > .flex-5 { min-width: 5%; }
+  & > .flex-10 { min-width: 10%; }
+  & > .flex-15 { min-width: 15%; }
+  & > .flex-20 { min-width: 20%; }
+  & > .flex-25 { min-width: 25%; }
+  & > .flex-30 { min-width: 30%; }
+  & > .flex-33 { min-width: 33.33%; }
+  & > .flex-35 { min-width: 35%; }
+  & > .flex-40 { min-width: 40%; }
+  & > .flex-45 { min-width: 45%; }
+  & > .flex-50 { min-width: 50%; }
+  & > .flex-55 { min-width: 55%; }
+  & > .flex-60 { min-width: 60%; }
+  & > .flex-65 { min-width: 65%; }
+  & > .flex-66 { min-width: 66.66%; }
+  & > .flex-70 { min-width: 70%; }
+  & > .flex-75 { min-width: 75%; }
+  & > .flex-80 { min-width: 80%; }
+  & > .flex-85 { min-width: 85%; }
+  & > .flex-90 { min-width: 90%; }
+  & > .flex-95 { min-width: 95%; }
+  & > .flex-100 { min-width: 100%; }
+  [class*="flex-"] { flex: 1 1 auto; }
+}

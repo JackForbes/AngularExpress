@@ -1,0 +1,58 @@
+// Image Base Url
+$image-url: 'https://s3.amazonaws.com/static-images.padpiper.com/';
+
+// Spacing
+$default-spacing: 16px;
+
+// Transitions
+$fade-slide-distance: 80px;
+$transition-duration: .4s;
+$transition-duration-lg: .5s;
+$reveal-duration: .4s;
+$transition-delay: .1s;
+$animation-duration: .4s;
+$animation-delay: .8s;
+$cubic-bezier: cubic-bezier(.35,0,.25,1);
+$cubic-bezier-button: cubic-bezier(.25,.8,.25,1);
+
+// Movement Durations
+$background-cloud-duration: 40s;
+$background-key-duration: 30s;
+
+// Shadows
+$img-alt-text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+$box-shadow: 0 2px 5px 0 rgba(0,0,0,.1);
+// Hioscar box shadow
+// $box-shadow: 0 0.7rem 1.4rem rgba(51,58,70,.15), 0 0.3rem 0.6rem rgba(0,0,0,.065);
+
+// Opacity
+$hidden-opacity: .2;
+$partly-hidden-opacity: .6;
+$overlay-opacity: .8;
+
+// Radius
+$default-border-radius: 3px;
+$input-border-radius: 2px;
+$label-border-radius: 5px;
+$message-border-radius: 5px;
+$message-triangle-width: 6px;
+
+// Screen sizes
+$xs-width: 600px;
+$sm-width: 960px;
+$md-width: 1280px;
+$lg-width: 1920px;
+$toolbar-resize: 692px;
+$grid-sm-width: 850px;
+$profile-listing-resize: 1100px;
+$about-chart-width: 1112px;
+$content-max-width: 1024px;
+
+// Element sizes
+$width-100: 100px;
+$width-120: 120px;
+$width-150: 150px;
+$width-200: 200px;
+$width-225: 225px;
+$width-320: 320px;
+$input-height: 42px;

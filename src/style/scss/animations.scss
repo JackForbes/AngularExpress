@@ -1,0 +1,146 @@
+// Page views
+[ui-view].ng-enter, [ui-view].ng-leave {
+  position: absolute;
+  left: 0;
+  right: 0;
+  transition: all $transition-duration $cubic-bezier;
+}
+
+[ui-view].ng-enter {
+  opacity: 0;
+  transform: scale3d(0.8, 0.8, 0.8);
+}
+
+[ui-view].ng-enter-active {
+  opacity: 1;
+  transform: scale3d(1, 1, 1);
+}
+
+[ui-view].ng-leave {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+[ui-view].ng-leave-active {
+  opacity: 0;
+  transform: translate3d($fade-slide-distance, 0, 0);
+}
+
+
+// Slide Open
+.slide-open {
+  overflow: hidden;
+  transition: max-height $transition-duration $cubic-bezier;
+}
+
+.slide-open.ng-hide {
+  max-height: 0;
+}
+
+.slide-open:not(.ng-hide) {
+  max-height: 100vh;
+}
+
+
+// Listing tiles
+.tile-image-price-container, .tile-title, .tile-subtitle {
+  opacity: 0;
+  transform: translateY($fade-slide-distance);
+  transition-property: opacity, transform;
+  transition-timing-function: $cubic-bezier;
+  transition-duration: $reveal-duration;
+}
+
+.tile-image-price-container {
+  transition-delay: $transition-delay;
+}
+
+.tile-title {
+  transition-delay: $transition-delay * 2;
+}
+
+.tile-subtitle {
+  transition-delay: $transition-delay * 3;
+}
+
+.is-visible .tile-image-price-container, .is-visible .tile-title, .is-visible .tile-subtitle {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.listing-tile.fade-slide-up.ng-enter, .listing-tile.fade-slide-up.ng-leave {
+  opacity: 0;
+}
+
+.listing-tile.fade-slide-up.ng-enter {
+  opacity: 0;
+  transform: translateY($fade-slide-distance);
+}
+
+.is-visible .listing-tile.fade-slide-up.ng-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.listing-tile.fade-slide-up.ng-leave {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.listing-tile.fade-slide-up.ng-leave-active {
+  opacity: 0;
+  transform: translateY($fade-slide-distance);
+}
+
+
+// Scroll reveal
+.fade-slide-up, .fade-slide-right, .fade-slide-left, .fade-scale, .fade-flip-up {
+  opacity: 0;
+  transition-property: opacity, transform;
+  transition-timing-function: $cubic-bezier;
+  transition-duration: $reveal-duration;
+}
+
+.fade-slide-up {
+  transform: translateY($fade-slide-distance);
+}
+
+.is-visible .fade-slide-up, .is-visible.fade-slide-up {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-slide-right {
+  transform: scale(.5) translateX(-$fade-slide-distance);
+}
+
+.fade-slide-left {
+  transform: scale(.5) translateX($fade-slide-distance);
+}
+
+.fade-scale {
+  transform: scale(.2);
+}
+
+.is-visible .fade-slide-right, .is-visible.fade-slide-right, .is-visible .fade-slide-left, .is-visible.fade-slide-left, .is-visible .fade-scale, .is-visible.fade-scale {
+  opacity: 1;
+  transform: scale(1) translateX(0);
+}
+
+.fade-flip-up {
+  transform: rotateX(-15deg);
+  transform-style: preserve-3d;
+  transform-origin: center top 10px;
+}
+
+.is-visible .fade-flip-up, .is-visible.fade-flip-up {
+  opacity: 1;
+  transform: rotateX(0);
+}
+
+// Check animation
+.check-animation {
+  stroke-dasharray: 20;
+  stroke-dashoffset: -20;
+  animation: draw $animation-duration $animation-delay $cubic-bezier 1 forwards;
+}
