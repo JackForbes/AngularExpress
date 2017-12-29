@@ -27,6 +27,3 @@ deployment:
     branch: master
     commands:
       - yarn run build_production
-      - aws s3 sync dist/ s3://padpiper.com --region us-east-1
-      - aws configure set preview.cloudfront true
-      - aws cloudfront create-invalidation --distribution-id EPPNNW5KM7X7C --paths '/*'

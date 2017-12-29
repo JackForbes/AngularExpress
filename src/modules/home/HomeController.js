@@ -15,8 +15,6 @@ class HomeController {
     this.AppService       = AppService;
     this.DisplayService   = DisplayService;
 
-    this.mooseSide        = `${STATIC_IMAGES_URL}animals/moose-side.png`;
-
     this.init();
   }
 
@@ -43,6 +41,9 @@ class HomeController {
       this.selectedTabIndex = this.$state.current.data.tabIndex;
   }
 
+  /**
+  * Initialize the map
+  */
   initMap() {
     this.$timeout(() => {
       var mapCanvas = document.getElementById('map-canvas');

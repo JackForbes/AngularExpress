@@ -8,8 +8,6 @@ var HtmlWebpackPlugin       = require('html-webpack-plugin');
 var ExtractTextPlugin       = require('extract-text-webpack-plugin');
 var CopyWebpackPlugin       = require('copy-webpack-plugin');
 var CompressionPlugin       = require('compression-webpack-plugin');
-var SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
-var WebpackPwaManifest      = require('webpack-pwa-manifest');
 
 var environment             = require('./config/environment');
 
@@ -25,9 +23,7 @@ module.exports = function makeWebpackConfig () {
     'angular-messages',
     'angular-sanitize',
     'angular-moment',
-    'angular-credit-cards',
     'angular-youtube-embed',
-    'angular-material-data-table',
     'ng-sortable'
   ];
 
@@ -257,10 +253,7 @@ module.exports = function makeWebpackConfig () {
   if (__PROD__) {
     config.plugins.push(
       // Only emit files when there are no errors
-      new webpack.NoErrorsPlugin(),
-
-      // Dedupe modules in the output
-      new webpack.optimize.DedupePlugin(),
+      new webpack.NoEmitOnErrorsPlugin(),
 
       // Minify all javascript, switch loaders to minimizing mode
       new webpack.optimize.UglifyJsPlugin({
