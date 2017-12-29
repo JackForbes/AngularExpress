@@ -1,0 +1,29 @@
+machine:
+  node:
+    version: 8.1.4
+  environment:
+    PATH: "${PATH}:${HOME}/${CIRCLE_PROJECT_REPONAME}/node_modules/.bin"
+
+dependencies:
+  pre:
+    - curl -o- -L https://yarnpkg.com/install.sh | bash
+  cache_directories:
+    - ~/.cache/yarn
+  override:
+    - yarn
+
+test:
+  pre:
+    - yarn run lint
+  override:
+    - npm rebuild node-sass
+    - yarn run ci-test:
+        environment:
+          JUNIT_REPORT_PATH: $CIRCLE_TEST_REPORTS/junit/
+          JUNIT_REPORT_NAME: test-results.xml
+
+deployment:
+  production:
+    branch: master
+    commands:
+      - yarn run build_production

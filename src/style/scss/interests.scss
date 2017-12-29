@@ -1,0 +1,121 @@
+/* Interests */
+.ea-team-container {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.ea-team {
+  height: auto;
+  max-width: 90%;
+}
+
+.dot-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+
+  .dot {
+    width: 8px;
+    height: 8px;
+    margin: 4px;
+    background: rgba(256,256,256,.6);
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+
+    &.active,
+    &:hover {
+      background: rgba(256,256,256,.9);
+    }
+  }
+}
+
+.cities-container {
+  height: 210px;
+  @include gt-xs {
+    height: 350px;
+  }
+
+  .dot-container {
+    top: -48px;
+
+    .dot {
+      background: $extra-light-grey;
+
+      &.active,
+      &:hover {
+        background: $grey;
+      }
+    }
+  }
+}
+
+.cities-carousel {
+  position: relative;
+  width: 760px;
+  transition: transform $transition-duration $cubic-bezier;
+  @include gt-xs {
+    width: 1320px;
+  }
+}
+$cities-count: 5;
+$city-width-xs: 120px;
+$city-margin-xs: $default-spacing;
+$city-y-offset-xs: -$default-spacing / 2;
+$city-width-gt-xs: 200px;
+$city-margin-gt-xs: $default-spacing * 2;
+$city-y-offset-gt-xs: -$default-spacing;
+@for $i from 0 through ($cities-count - 1) {
+  .cities-carousel.active-#{$i} {
+    transform: translateX(($city-width-xs + ($city-margin-xs * 2)) * (2 - $i));
+    @include gt-xs {
+      transform: translateX(($city-width-gt-xs + ($city-margin-gt-xs * 2)) * (2 - $i));
+    }
+
+    .cities-tile:nth-child(#{$i + 2}),
+    .cities-tile:nth-child(#{$i}) {
+      transform: translateY($city-y-offset-xs);
+      @include gt-xs {
+        transform: translateY($city-y-offset-gt-xs);
+      }
+    }
+
+    .cities-tile:nth-child(#{$i + 3}),
+    .cities-tile:nth-child(#{$i - 1}) {
+      transform: translateY($city-y-offset-xs * 3);
+      @include gt-xs {
+        transform: translateY($city-y-offset-gt-xs * 3);
+      }
+    }
+  }
+}
+
+.cities-tile {
+  width: $city-width-xs;
+  margin: $city-margin-xs / 2 $city-margin-xs;
+  transition: opacity $transition-duration $cubic-bezier-button, transform $transition-duration $cubic-bezier;
+  @include gt-xs {
+    width: $city-width-gt-xs;
+    margin: $city-margin-gt-xs / 2 $city-margin-gt-xs;
+  }
+
+  &.curtain:focus {
+    outline: none;
+    opacity: $partly-hidden-opacity;
+  }
+
+  &:not(.curtain):focus {
+    outline: none;
+  }
+
+  img {
+    width: $city-width-xs;
+    height: $city-width-xs;
+    border-radius: 50%;
+    @include gt-xs {
+      width: $city-width-gt-xs;
+      height: $city-width-gt-xs;
+    }
+  }
+}

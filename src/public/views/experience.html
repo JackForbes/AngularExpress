@@ -1,0 +1,37 @@
+<div class="experience padding-lg" scroll-reveal="90">
+
+  <md-grid-list md-cols="1" md-cols-gt-xs="2" md-row-height="700px" md-gutter-gt-xs="16px" md-gutter="4px">
+    <md-grid-tile class="listing-tile fade-slide-up" ng-repeat="job in hc.DisplayService.jobs">
+      <div class="fill" ng-mouseenter="job.isTileHovered = true" ng-mouseleave="job.isTileHovered = false">
+        <div class="tile user-select-none">
+          <div class="tile-content relative">
+            <a class="tile-image media-cover hover-none" ng-href="{{job.links[0]}}" target="_blank">
+              <div class="relative background-accent fill">
+                <img class="expandable-width transform-center" ng-src="{{job.hero}}" alt="Employer Hero">
+              </div>
+            </a>
+          </div>
+          <div class="tile-info padding-md relative">
+            <div class="overflow-hidden">
+              <div class="meta grey" layout layout-align="space-between center">
+                <span>{{ job.date }}</span>
+                <span>{{ job.location }}</span>
+              </div>
+              <h4 class="tile-title user-select-none margin-top-sm">{{ job.company }}</h4>
+              <h6 class="user-select-none">{{ job.position }}</h6>
+              <p class="margin-top">{{ job.description }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </md-grid-tile>
+  </md-grid-list>
+
+  <!-- <div id="map-canvas">
+    <div>
+      <div id="class" ng-repeat="marker in hc.DisplayService.markers | orderBy : 'title'">
+        <a href="#" ng-click="hc.openInfoWindow($event, marker)">{{marker.title}}</a>
+      </div>
+    </div>
+  </div> -->
+</div>

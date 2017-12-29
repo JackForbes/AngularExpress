@@ -1,0 +1,156 @@
+.icon--12 {
+  width: 12px;
+  height: 12px;
+  min-width: 12px;
+  min-height: 12px;
+}
+
+.icon--14 {
+  width: 14px;
+  height: 14px;
+  min-width: 14px;
+  min-height: 14px;
+}
+
+.icon--16 {
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+  min-height: 16px;
+
+  &:not(.no-grow) {
+    @include gt-md {
+      width: 20px;
+      height: 20px;
+    };
+  }
+}
+
+.icon--20 {
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  min-height: 20px;
+
+  &:not(.no-grow) {
+    @include gt-md {
+      width: 24px;
+      height: 24px;
+    };
+  }
+}
+
+.icon--24 {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  min-height: 24px;
+
+  &:not(.no-grow) {
+    @include gt-md {
+      width: 28px;
+      height: 28px;
+    };
+  }
+}
+
+.icon--30 {
+  width: 30px;
+  height: 30px;
+
+  &:not(.no-grow) {
+    @include gt-md {
+      width: 36px;
+      height: 36px;
+    };
+  }
+}
+
+.icon--42 {
+  width: 42px;
+  height: 42px;
+
+  &:not(.no-grow) {
+    @include gt-md {
+      width: 60px;
+      height: 60px;
+    };
+  }
+}
+
+.icon--60 {
+  width: 60px;
+  height: 60px;
+
+  &:not(.no-grow) {
+    @include gt-md {
+      width: 72px;
+      height: 72px;
+    };
+  }
+}
+
+.icon--white {
+  color: $white !important;
+  fill: $white !important;
+}
+
+.icon--medium-light {
+  color: $medium-light-grey !important;
+  fill: $medium-light-grey !important;
+}
+
+.icon--light {
+  color: $light-grey !important;
+  fill: $light-grey !important;
+}
+
+.icon--black {
+  color: $black !important;
+  fill: $black !important;
+}
+
+.icon--primary {
+  color: $primary-color !important;
+  fill: $primary-color !important;
+}
+
+.icon--accent {
+  color: $accent-color !important;
+  fill: $accent-color !important;
+}
+
+.icon--warn {
+  color: $warn-color !important;
+  fill: $warn-color !important;
+}
+
+.icon--green {
+  color: $verified-color !important;
+}
+
+.icon--logo path {
+  color: $white !important;
+  fill: $white !important;
+}
+
+.icon-float {
+  position: absolute;
+  z-index: 10;
+
+  &.icon-float--left {
+    top: 50%;
+    left: $default-spacing / 2;
+    transform: translateY(-50%);
+  }
+
+  &.icon-float--right {
+    top: 0;
+    right: 0;
+  }
+
+  &.icon-float--right-sm {
+    top: $default-spacing / 2;
+    right: $default-spacing / 2;
+  }
+}

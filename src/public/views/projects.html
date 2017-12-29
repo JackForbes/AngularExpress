@@ -1,0 +1,28 @@
+<div class="padding-lg" scroll-reveal="90">
+  <md-grid-list md-cols="1" md-cols-gt-xs="2" md-row-height="550px" md-gutter-gt-xs="16px" md-gutter="4px">
+    <md-grid-tile class="listing-tile fade-slide-up" ng-repeat="project in hc.DisplayService.projects">
+      <div class="fill">
+        <div class="tile user-select-none">
+          <div class="tile-content relative">
+            <a class="tile-image media-cover hover-none" ng-href="{{project.href}}">
+              <div class="relative background-accent fill">
+                <img class="expandable-width transform-center" ng-src="{{project.iconSrc}}" alt="Project Hero">
+              </div>
+            </a>
+          </div>
+          <div class="tile-info padding-md relative">
+            <div class="overflow-hidden">
+              <div class="meta grey">
+                <span>{{ project.date }}</span>
+              </div>
+              <h4 class="tile-title user-select-none margin-top-sm">{{ project.title }}</h4>
+              <h6 class="user-select-none">{{ project.position }}</h6>
+              <p>{{ project.description }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </md-grid-tile>
+  </md-grid-list>
+
+</div>

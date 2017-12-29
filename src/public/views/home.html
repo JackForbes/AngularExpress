@@ -1,0 +1,72 @@
+<div class="home background-accent" konami="hc.konami()">
+  <!-- Hero -->
+  <div class="home-hero padding-lg">
+
+    <!-- Intro -->
+    <div scroll-reveal="100">
+      <h1 class="white margin-center center fade-slide-up">Jack Forbes</h1>
+      <h4 class="white margin-center center fade-slide-up">Welcome to my site!</h4>
+    </div>
+
+  </div>
+
+  <!-- Home Tabs -->
+  <div class="home-tabs max-width-content margin-center">
+
+    <md-tabs class="md-dynamic-height md-primary" md-selected="hc.selectedTabIndex" md-stretch-tabs="always" md-border-bottom>
+
+      <!-- Work Experience Tab -->
+      <md-tab label="Work Experience" md-on-select="hc.updateUrl('experience')">
+        <md-content>
+
+          <experience></experience>
+
+        </md-content>
+      </md-tab>
+
+      <!-- Projects Tab -->
+      <md-tab label="Projects" md-on-select="hc.updateUrl('projects');">
+        <md-content>
+
+          <projects></projects>
+
+        </md-content>
+      </md-tab>
+
+      <!-- Resume Tab -->
+      <md-tab label="Resume" md-on-select="hc.updateUrl('resume')">
+        <md-content class="padding-lg">
+
+          <resume></resume>
+
+        </md-content>
+      </md-tab>
+
+      <!-- Quotes Tab -->
+      <md-tab label="Quotes" ng-click="hc.updateUrl('quotes')">
+        <md-content class="padding-md">
+
+          <quotes></quotes>
+
+        </md-content>
+      </md-tab>
+
+      <!-- Interests Tab -->
+      <md-tab label="Interests" ng-click="hc.updateUrl('interests');">
+        <md-content class="padding-lg overflow-hidden">
+
+          <interests></interests>
+
+        </md-content>
+      </md-tab>
+
+    </md-tabs>
+
+  </div>
+
+  <!-- Sidney Crosby -->
+  <img ng-if="hc.showCrosby" class="ng-cloak crosby" ng-class="{visible: hc.showCrosby}" ng-src="{{hc.DisplayService.images.crosbyPath}}" alt="Sidney Crosby">
+
+  <site-footer></site-footer>
+
+</div>

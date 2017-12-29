@@ -1,0 +1,15 @@
+/* Primary content area */
+.home-hero {
+  position: relative;
+  height: 50vh;
+  background-color: $home-background;
+  background-image: url($image-url + 'Whistler-Sunset.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.home-tabs {
+  margin-top: -20vh;
+}

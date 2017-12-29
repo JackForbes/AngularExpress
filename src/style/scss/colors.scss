@@ -1,0 +1,136 @@
+// Colors
+$primary-color: #00BCD4;
+$hue-1-color: #F0FBFF;
+$hue-2-color: #C1F4F6;
+$hue-3-color: #80DEEA;
+$hue-4-color: #00ACC1;
+$hue-5-color: #79D7E4;
+$hue-6-color: #0EC6DE;
+$accent-color: #212121;
+$warn-color: #FF5353;
+$success-color: #8FD6A9;
+
+$white: #FFFFFF;
+$extra-light-white: #F7F7F7;
+$light-white: rgba(255,255,255,.87);
+$black: #000000;
+$light-black: rgba(0,0,0,.87);
+$extra-light-black: rgba(0,0,0,.54);
+$grey: #9E9E9E;
+$light-grey: #BDBDBD;
+$medium-light-grey: #E0E0E0;
+$extra-light-grey: #EEEEEE;
+
+$disabled-background: #D8D8D8;
+$disabled-text: #A8A89D;
+
+$marker-color: #00BCD4;
+$marker-border-color: $hue-4-color;
+$work-marker-color: #0D47A1;
+$marker-cluster-background-color: $hue-2-color;
+
+$favorite-color: #FF8E87;
+$verified-color: $success-color;
+
+$profile-image-border-color: $white;
+$medium-grey: #757575;
+$calendar-green: $success-color;
+$calendar-green-hover: #81C784;
+$calendar-border-color: #C7C7C7;
+
+$home-background: #F4FCFE;
+$light-blue: #DAF4FD;
+$dark-blue: #083F60;
+$orange: #FFB32F;
+$light-orange: rgba(#FFCF58, .2);
+$light-red: rgba($warn-color, .2);
+$green: #9ED294;
+$light-green: rgba($green, .2);
+
+$facebook-color: #3B5998;
+$facebook-color-hover: #4568b2;
+$messenger-color: #0080FF;
+$messenger-color-hover: #0084ff;
+$twitter-color: #059FF5;
+$twitter-color-hover: #1da1f2;
+
+
+// Color classes
+.extra-light-black {
+  color: $extra-light-black;
+}
+.white {
+  color: $white;
+}
+.light {
+  color: $light-grey !important;
+}
+.grey {
+  color: $grey;
+}
+.extra-light {
+  color: $extra-light-grey;
+}
+.primary-text {
+  color: $primary-color;
+}
+.accent-text {
+  color: $accent-color;
+}
+.warn {
+  color: $warn-color;
+}
+.success {
+  color: $success-color;
+}
+.background-white {
+  background-color: $white;
+}
+.background-extra-light {
+  background-color: $extra-light-white;
+}
+.background-medium-light {
+  background-color: $medium-light-grey;
+}
+.background-grey {
+  background-color: $grey;
+}
+.background-light {
+  background-color: $light-grey;
+}
+.background-home-background {
+  background-color: $home-background;
+}
+.background-hue-1 {
+  background-color: $hue-1-color;
+}
+.background-light-blue {
+  background-color: $light-blue;
+}
+.background-dark-blue {
+  background-color: $dark-blue;
+}
+.background-primary {
+  background-color: $primary-color;
+}
+.background-accent {
+  background-color: $accent-color;
+}
+.background-warn {
+  background-color: $warn-color;
+}
+.background-orange {
+  background-color: $orange;
+}
+.background-created, .background-pending, .background-refund_processing {
+  color: $orange;
+  background-color: $light-orange;
+}
+.background-failed {
+  color: $warn-color;
+  background-color: $light-red;
+}
+.background-succeeded, .background-refunded {
+  color: $green;
+  background-color: $light-green;
+}
