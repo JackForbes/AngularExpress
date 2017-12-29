@@ -1,0 +1,33 @@
+<div class="interests" ng-keypress="hc.keyPress($event, hc.DisplayService.interests[hc.interestIndex].gallery.length)">
+  <div class="cities-container relative margin-top-xl overflow-visible">
+    <div class="transform-center-center">
+      <div class="cities-carousel" ng-class="'active-' + hc.interestIndex">
+        <div class="cities-tile inline-block pointer" ng-repeat="interest in hc.DisplayService.interests track by $index" ng-click="hc.interestIndex = $index; hc.photoIndex = 0; hc.bindImageLoad();" ng-class="{ curtain: hc.interestIndex !== $index }">
+          <img ng-src="{{interest.imgSrc}}" alt="City image" md-swipe-left="hc.nextInterest(hc.DisplayService.interests.length)" md-swipe-right="hc.prevInterest(hc.DisplayService.interests.length)">
+          <div class="margin-top-lg" layout="column" layout-align="center center">
+            <h3>{{ interest.name }}</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="dot-container" layout layout-align="center center">
+      <div class="dot" ng-repeat="interest in hc.DisplayService.interests track by $index" ng-click="hc.interestIndex = $index; hc.photoIndex = 0; hc.bindImageLoad();" ng-class="{active: hc.interestIndex === $index}" aria-label="{{interest.name}}"></div>
+    </div>
+  </div>
+  <div>
+    <div class="interest animate-switch" ng-show="hc.interestIndex === interest.index" ng-repeat="interest in hc.DisplayService.interests">
+      <div class="gallery relative overflow-hidden">
+        <div class="carousel overflow-hidden">
+          <img ng-if="$index - hc.photoIndex < hc.imageBuffer" class="expandable-width" ng-repeat="photo in interest.gallery track by $index" ng-src="{{photo.src}}" alt="{{photo.desc}}" />
+        </div>
+        <div ng-show="hc.photoIndex !== 0" class="image-control prev" layout layout-align="center center" ng-click="hc.changePhoto('prev')">
+          <md-icon class="icon--42" md-svg-icon="arrow_left"></md-icon>
+        </div>
+        <div ng-show="!hc.isMaxTranslate" class="image-control next" layout layout-align="center center" ng-click="hc.changePhoto('next')">
+          <md-icon class="icon--42" md-svg-icon="arrow_right"></md-icon>
+        </div>
+      </div>
+      <p>{{ interest.description }}</p>
+    </div>
+  </div>
+</div>

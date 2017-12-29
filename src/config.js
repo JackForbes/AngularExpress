@@ -1,14 +1,8 @@
 function config ($sceDelegateProvider, $urlRouterProvider, $locationProvider, $mdThemingProvider, $mdDialogProvider, $mdIconProvider) {
 
-  if ((ENV === 'production' || ENV === 'production') && typeof Raven != 'undefined' && typeof Raven !== null)
-    Raven.config(`https://${SENTRY_API_KEY}`).install();
-
   $sceDelegateProvider.resourceUrlWhitelist([
     'self',
-    'https://s3.amazonaws.com/dev-images.padpiper.com/**',
-    'https://s3.amazonaws.com/images.padpiper.com/**',
-    'https://s3.amazonaws.com/static-images.padpiper.com/**',
-    '*://www.youtube.com/embed/**',
+    '*://www.youtube.com/embed/**'
   ]);
 
   $locationProvider.html5Mode({
@@ -58,10 +52,7 @@ function config ($sceDelegateProvider, $urlRouterProvider, $locationProvider, $m
   });
 
   $mdIconProvider
-    .defaultIconSet(`${STATIC_IMAGES_URL}svg/bfg-all-icons-min.svg`, 24)
-    .icon('padpiper', `${STATIC_IMAGES_URL}svg/padpiper-primary.svg`, 24)
-    .icon('logo', `${STATIC_IMAGES_URL}svg/logo-black.svg`, 24)
-    .icon('sun', `${STATIC_IMAGES_URL}svg/sun.svg`, 24);
+    .defaultIconSet(`${STATIC_IMAGES_URL}svg/bfg-all-icons-min.svg`, 24);
 }
 
 config.$inject = ['$sceDelegateProvider', '$urlRouterProvider', '$locationProvider', '$mdThemingProvider', '$mdDialogProvider', '$mdIconProvider'];

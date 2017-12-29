@@ -20,23 +20,21 @@
     <meta property="og:title" content="I love lamp.">
     <meta property="og:description" content="I work on PadPiper and play soccer.">
     <meta property="og:url" content="https://www.jackforbes.net">
-    <!-- <meta property="og:image" content="https://s3.amazonaws.com/static-images.padpiper.com/logos/facebook-1200x630.jpg"> -->
+    <!-- <meta property="og:image" content="/images/logos/facebook-1200x630.jpg"> -->
 
     <!-- Twitter Meta -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@padpiper" />
+    <meta name="twitter:site" content="@thenameisforbes" />
     <meta name="twitter:title" content="Jack Forbes">
     <meta name="twitter:description" content="I work on PadPiper and play soccer.">
     <meta name="twitter:url" content="https://www.jackforbes.net">
-    <!-- <meta name="twitter:image" content="https://s3.amazonaws.com/static-images.padpiper.com/logos/twitter-600x315.jpg"> -->
+    <!-- <meta name="twitter:image" content="/images/logos/twitter-600x315.jpg"> -->
 
     <!-- Link Meta -->
     <link rel="canonical" href="https://www.jackforbes.net">
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500" rel="stylesheet">
-    <link href="https://s3.amazonaws.com/static-images.padpiper.com/fonts/FreigSanLFProBoo.otf" rel="stylesheet">
-    <link href="https://s3.amazonaws.com/static-images.padpiper.com/fonts/FreigSanLFProSem.otf" rel="stylesheet">
 
     <!-- Hide when Angular is not yet loaded and initialized -->
     <style type="text/css">
@@ -64,7 +62,7 @@
 
   </head>
 
-  <body ng-controller="AppCtrl as ctrl" layout="column" id="body" ng-class="{ 'background-home-background': ctrl.state.includes('home') }">
+  <body ng-controller="AppCtrl as ctrl" layout="column" id="body">
 
     <!-- Dynamic Meta Tags -->
     <update-meta name="description" content="{{ pageDescription }}"></update-meta>
@@ -78,29 +76,6 @@
     <update-meta name="twitter:image" content="{{ twitterImage }}"></update-meta>
     <update-link rel="canonical" href="{{ pageUrl }}"></update-link>
 
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TVRM2L"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-
-    <!-- Facebook -->
-    <script>
-      window.fbAsyncInit = function() {
-        FB.init({
-          appId      : '1671188829873050',
-          xfbml      : true,
-          version    : 'v2.9'
-        });
-      };
-
-      (function(d, s, id){
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) {return;}
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js";
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-    </script>
-
     <!-- Accessibility Skip to Content -->
     <a class="screen-reader-only ng-cloak" href="#site-content">Skip to content</a>
 
@@ -108,47 +83,17 @@
       <h4>You're using an unsupported browser. Please use my site on any other browser, such as Chrome, Firefox, or Edge.</h4>
     </div>
 
-    <!-- Nav -->
-    <site-nav></site-nav>
-
-    <!-- Sidenav -->
-    <md-sidenav ng-if="ctrl.$mdMedia('xs')" class="md-sidenav-left md-whiteframe-2dp sidenav ng-cloak" md-component-id="left">
-      <md-content>
-        <md-list>
-          <md-list-item ng-repeat="item in ctrl.display.mobileNavItems[ctrl.auth.role]" class="md-2-line" ng-click="ctrl.toggleNav(); ctrl.goToPage($event, item.sref, item.authenticate);">
-            <div class="md-list-item-text">
-              <h3 class="sidenav-title">{{ item.title }}</h3>
-            </div>
-          </md-list-item>
-        </md-list>
-      </md-content>
-    </md-sidenav>
-
     <!-- Main Content -->
     <md-content class="main-content" id="site-content">
       <div id="placesServiceElement"></div>
       <div class="ng-cloak" ui-view autoscroll="true"></div>
     </md-content>
 
-    <!-- Sidney Crosby -->
-    <img ng-if="ctrl.showCrosby" class="ng-cloak crosby" ng-class="{visible: ctrl.showCrosby}" ng-src="{{ctrl.display.crosbyPath}}" alt="Sidney Crosby">
-
     <!-- Google Maps -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDV1jPTyTEcRo92Rj3BdmCk49VdIxs1b0k&libraries=places"></script>
 
-    <!-- Raven/Sentry -->
-    <script src="https://cdn.ravenjs.com/3.12.0/raven.min.js" crossorigin="anonymous"></script>
-
-    <!-- Service Worker -->
-    <script>
-      (function () {
-        if ('serviceWorker' in navigator) {
-          navigator.serviceWorker.register('./service-worker.js', {scope: '/'})
-          .then(() => console.log('Service Worker registered successfully.'))
-          .catch(error => console.log('Service Worker registration failed:', error));
-        }
-      })();
-    </script>
+    <!-- PDF JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.0.232/pdf.min.js"></script>
 
   </body>
 

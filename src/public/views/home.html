@@ -1,156 +1,71 @@
-<div class="home" konami="hc.konami()">
+<div class="home background-accent" konami="hc.konami()">
   <!-- Hero -->
-  <div class="home-hero overflow-hidden">
+  <div class="home-hero padding-lg">
 
     <!-- Intro -->
-    <div class="margin-sides" scroll-reveal="100">
-      <h1 class="intro-title margin-center center fade-slide-up">Jack Forbes</h1>
+    <div scroll-reveal="100">
+      <h1 class="white margin-center center fade-slide-up">Jack Forbes</h1>
+      <h4 class="white margin-center center fade-slide-up">Welcome to my site!</h4>
     </div>
-
-    <!-- Clouds and Sun -->
-    <md-icon class="sun" md-svg-src="sun"></md-icon>
-    <img class="cloud1" ng-src="{{hc.display.images.graphicCloud1}}" alt="Cloud" />
-    <img class="cloud2" ng-src="{{hc.display.images.graphicCloud2}}" alt="Cloud" />
-    <img class="cloud3" ng-src="{{hc.display.images.graphicCloud3}}" alt="Cloud" />
-    <img class="cloud4" ng-src="{{hc.display.images.graphicCloud4}}" alt="Cloud" />
-    <img class="cloud5" ng-src="{{hc.display.images.graphicCloud5}}" alt="Cloud" />
 
   </div>
 
-  <section ng-if="hc.role === 'student'">
-    <div class="extra-space-section relative background-light-blue left margin-center padding-xl">
-      <h2 class="fade-slide-up" scroll-reveal="90">Have an extra space?<br>Become a landlord.</h2>
-      <p class="max-width-400 fade-slide-up" scroll-reveal="90">Earn more profile, easily manage your rentals online, and know exactly who you're renting to.</p>
-      <md-button class="md-primary md-raised margin-none fade-slide-up" ui-sref="home.landlord" ui-sref-opts="{ reload: true }" scroll-reveal="90">
-        Learn more
-      </md-button>
-      <img hide-xs ng-src="{{hc.mooseSide}}" alt="Moose" />
-    </div>
-  </section>
+  <!-- Home Tabs -->
+  <div class="home-tabs max-width-content margin-center">
 
-  <!-- Student Cities -->
-  <section ng-if="hc.role === 'student'" class="overflow-hidden center padding-xl">
-    <h2 class="center fade-slide-up" scroll-reveal="90">No matter where you go, we've got you.</h2>
-    <div class="max-width-500 margin-center fade-slide-up" scroll-reveal="90">
-      <p class="intro margin-top-sm">With millions of students in universities worldwide, we're trying to improve the housing experience for students everywhere.</p>
-    </div>
-    <div class="cities-container relative margin-top-xl overflow-visible">
-      <div class="transform-center-center">
-        <div class="cities-carousel" ng-class="'active-'+ hc.cityIndex">
-          <div class="cities-tile inline-block pointer" ng-repeat="city in hc.display.defaultCities track by $index" ng-click="hc.cityIndex = $index" ng-class="{ curtain: hc.cityIndex !== $index }">
-            <img ng-src="{{city.imgSrc}}" alt="City image" md-swipe-left="hc.nextCity(hc.display.defaultCities.length)" md-swipe-right="hc.prevCity(hc.display.defaultCities.length)">
-            <div class="margin-top-lg" layout="column" layout-align="center center">
-              <h3>{{ city.title }}</h3>
-              <h5>{{ city.subtitle }}</h5>
-              <a ng-if="hc.cityIndex === $index" class="hover-none margin-top-sm" href ui-sref="listings({ city: city.city, state: city.state, start: ctrl.auth.input.start, months: ctrl.auth.input.duration })" ui-sref-opts="{ reload: true }">
-                View listings
-                <md-icon class="md-primary icon--16" md-svg-icon="forward_arrow"></md-icon>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="dot-container" layout layout-align="center center">
-        <div class="dot" ng-repeat="city in hc.display.defaultCities track by $index" ng-click="hc.cityIndex = $index" ng-class="{active: hc.cityIndex === $index}" aria-label="{{city.city}}"></div>
-      </div>
-    </div>
+    <md-tabs class="md-dynamic-height md-primary" md-selected="hc.selectedTabIndex" md-stretch-tabs="always" md-border-bottom>
 
-    <p class="intro margin-top-xl fade-slide-up" scroll-reveal="90">Need to find a place somewhere else?</p>
-    <md-button class="md-primary md-raised margin-top fade-slide-up" ui-sref="listings({ city: city.city, state: city.state, start: ctrl.auth.input.start, months: ctrl.auth.input.duration })" ui-sref-opts="{ reload: true }" scroll-reveal="90">
-      Search all rentals
-    </md-button>
-  </section>
+      <!-- Work Experience Tab -->
+      <md-tab label="Work Experience" md-on-select="hc.updateUrl('experience')">
+        <md-content>
 
-  <!-- Student Schools -->
-  <section ng-if="hc.role === 'student'" class="padding-xl">
-    <h2 class="center fade-slide-up" scroll-reveal="90">We help students from over 9,000 universities<br>find quality, trusted housing.</h2>
-    <div class="margin-top-xl">
-      <div class="schools-container max-width-1140 relative margin-center" layout layout-align="center center" layout-wrap>
-        <div class="school-container" ng-repeat="school in ctrl.display.supportedSchools">
-          <img class="expandable-width" ng-src="{{school.img}}" alt="{{school.name}}" />
-        </div>
-      </div>
-    </div>
-    <div class="max-width-content margin-center" layout-gt-sm layout-align-gt-sm="center start">
-      <div flex-gt-sm="40" scroll-reveal="90">
-        <p class="intro margin-top-xl fade-slide-up" layout layout-align="center center" layout-align-gt-sm="start center">Check if your school is supported.</p>
-        <div class="margin-top fade-slide-up" layout layout-align="center center" flex>
-          <md-autocomplete class="max-width-400" md-no-cache="true" md-selected-item="hc.selectedSchool" md-selected-item-change="ctrl.openLoginDialog($event, true, hc.selectedSchool)" md-search-text="hc.schoolSearchText" md-items="item in hc.schoolSearch(hc.schoolSearchText)"
-            md-item-text="item.name" md-min-length="1" placeholder="University or college" md-menu-class="autocomplete-student-template" flex>
-            <md-item-template>
-              <div>
-                <span class="item-title" md-highlight-text="hc.schoolSearchText" md-highlight-flags="gi">{{ item.name }}</span>
-                <span class="item-subtitle light">@{{ item.domain }}</span>
-              </div>
-            </md-item-template>
-            <md-not-found>
-              No matching schools found
-            </md-not-found>
-          </md-autocomplete>
-        </div>
-        <div class="padding-top margin-bottom fade-slide-up" layout layout-align="center center" layout-align-gt-sm="start center">
-          Don't see your school?
-          <a class="margin-left-sm" href ng-click="hc.addSchool($event)">
-            Let's add it.
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
+          <experience></experience>
 
-  <!-- Landlord Hero -->
-  <section ng-if="hc.role === 'landlord'" class="section--one">
-    <div class="section-content fade-slide-up margin-center" scroll-reveal="90">
-      <h1 class="center">Listing and managing rentals has never been easier.</h1>
-      <p class="center">Throughout the year, thousands of students look for short-term housing — from single beds to entire spaces — for school terms and internships throughout the United States and Canada. With PadPiper’s intuitive design, listing a rental is both transparent and simple.
-        Students on PadPiper offer steady demand, less risk, and higher profit.</p>
-    </div>
-  </section>
+        </md-content>
+      </md-tab>
 
-  <!-- Landlord value props -->
-  <section ng-if="hc.role === 'landlord'" class="section--two">
-    <div class="section-content margin-center">
-      <h2 class="center fade-slide-up margin-top-bottom" scroll-reveal="90">Become a PadPiper Landlord</h2>
-      <div layout="column" layout-gt-xs="row">
-        <div class="padding-lg fade-slide-up" flex-gt-xs="50" scroll-reveal="90">
-          <img ng-src="{{hc.listingImg}}" alt="Free" />
-          <h4 class="margin-top">Create and manage listings at no cost to you.</h4>
-          <p class="margin-top">With a step-by-step guide and template, landlords upload information, photos, and pricing details for the space. To determine when tenants can rent, landlords simply select the availability of the space on a month-to-month basis. (Oh, and best
-            of all: there’s no cost to list a space.)</p>
-        </div>
-        <div class="padding-lg fade-slide-up" flex-gt-xs="50" scroll-reveal="90">
-          <img ng-src="{{hc.lockImg}}" alt="Verified" />
-          <h4 class="margin-top">Feel secure by knowing exactly who you’re renting to.</h4>
-          <p class="margin-top">PadPiper confirms all students are legitimate by verifying their school email addresses. Landlords can access students’ profiles to see their education, work experience, and previously rented PadPiper spaces.</p>
-        </div>
-      </div>
-      <div layout="column" layout-gt-xs="row">
-        <div class="padding-lg fade-slide-up" flex-gt-xs="50" scroll-reveal="90">
-          <img ng-src="{{hc.paymentImg}}" alt="Payment" />
-          <h4 class="margin-top">Request and receive electronic payments for initial fees.</h4>
-          <p class="margin-top">Landlords can require first month’s rent and/or security deposit. Through Stripe on PadPiper, students electronically pay these fees to the landlord before moving into the space.</p>
-        </div>
-        <div class="padding-lg fade-slide-up" flex-gt-xs="50" scroll-reveal="90">
-          <img ng-src="{{hc.messageImg}}" alt="Communication" />
-          <h4 class="margin-top">Easily communicate with tenants throughout the entire process.</h4>
-          <p class="margin-top">Landlords and students can communicate with each other to discuss details of a lease and send documents through PadPiper’s messaging portal.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+      <!-- Projects Tab -->
+      <md-tab label="Projects" md-on-select="hc.updateUrl('projects');">
+        <md-content>
 
-  <!-- Get started -->
-  <section ng-if="!ctrl.auth.user" class="padding-md">
-    <div class="max-width-1140 background-primary margin-center padding-lg">
-      <h2 class="white center fade-slide-up" scroll-reveal="90">Get started.</h2>
-      <p class="intro white center margin-top fade-slide-up" scroll-reveal="90">Join our community. Help improve the student experience, starting with housing.</p>
-      <div class="center">
-        <md-button class="md-primary background-white margin-top fade-slide-up" ng-click="ctrl.openLoginDialog($event, true)" scroll-reveal="90">
-          Join
-        </md-button>
-      </div>
-    </div>
-  </section>
+          <projects></projects>
+
+        </md-content>
+      </md-tab>
+
+      <!-- Resume Tab -->
+      <md-tab label="Resume" md-on-select="hc.updateUrl('resume')">
+        <md-content class="padding-lg">
+
+          <resume></resume>
+
+        </md-content>
+      </md-tab>
+
+      <!-- Quotes Tab -->
+      <md-tab label="Quotes" ng-click="hc.updateUrl('quotes')">
+        <md-content class="padding-md">
+
+          <quotes></quotes>
+
+        </md-content>
+      </md-tab>
+
+      <!-- Interests Tab -->
+      <md-tab label="Interests" ng-click="hc.updateUrl('interests');">
+        <md-content class="padding-lg overflow-hidden">
+
+          <interests></interests>
+
+        </md-content>
+      </md-tab>
+
+    </md-tabs>
+
+  </div>
+
+  <!-- Sidney Crosby -->
+  <img ng-if="hc.showCrosby" class="ng-cloak crosby" ng-class="{visible: hc.showCrosby}" ng-src="{{hc.DisplayService.images.crosbyPath}}" alt="Sidney Crosby">
 
   <site-footer></site-footer>
 

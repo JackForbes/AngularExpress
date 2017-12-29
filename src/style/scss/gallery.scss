@@ -1,0 +1,36 @@
+.gallery {
+  height: 300px;
+
+  @include gt-xs {
+    height: 400px;
+  };
+
+  @include gt-md {
+    height: 540px;
+  };
+
+  &:hover .image-control md-icon {
+    display: block;
+  }
+
+  .carousel {
+    width: 1000vw;
+    transition: transform $transition-duration $cubic-bezier;
+
+    img:not(:last-child) {
+      margin-right: $default-spacing / 2;
+    }
+
+    img {
+      max-width: 3000px;
+    }
+  }
+
+  .dot-container {
+    bottom: 16px;
+  }
+
+  .image-control md-icon {
+    font-size: 96px;
+  }
+}

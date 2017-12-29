@@ -13,8 +13,6 @@ var WebpackPwaManifest      = require('webpack-pwa-manifest');
 
 var environment             = require('./config/environment');
 
-const MANIFEST_ICONS_URL    = 'https://s3.amazonaws.com/static-images.padpiper.com/logos/logo-white.png';
-
 module.exports = function makeWebpackConfig () {
 
   /**
@@ -269,34 +267,6 @@ module.exports = function makeWebpackConfig () {
         comments: false,
         whitespace: false,
         sourceMap: true
-      }),
-
-      // Create service-worker.js file for PWA capabilities
-      new SWPrecacheWebpackPlugin({
-          cacheId: 'padpiper-sw-cache',
-          dontCacheBustUrlsMatching: /\.\w{8}\./,
-          filename: 'service-worker.js',
-          minify: true,
-          navigateFallback: config.output.publicPath,
-          staticFileGlobsIgnorePatterns: [/\.map$/, /manifest\.json$/]
-      }),
-
-      // Reference: https://github.com/arthurbergmz/webpack-pwa-manifest
-      // Generate application manifest for PWA capabilities
-      new WebpackPwaManifest({
-        name: 'PadPiper',
-        short_name: 'PadPiper',
-        description: 'With PadPiper, students can easily find trusted housing for school terms and internships, and landlords can quickly find suitable tenants for their spaces.',
-        background_color: '#00BCD4',
-        theme_color: '#00BCD4',
-        'theme-color': '#00BCD4',
-        start_url: '/',
-        icons: [
-          {
-            src: MANIFEST_ICONS_URL,
-            sizes: [96, 128, 192, 256, 384, 512]
-          }
-        ]
       }),
 
       // Compress JS and CSS files for faster loading

@@ -49,6 +49,12 @@ md-tabs.md-primary {
   }
 }
 
+md-tabs.md-accent {
+  md-content {
+    background-color: $accent-color;
+  }
+}
+
 // List items
 md-list-item.md-3-line {
   .md-avatar,

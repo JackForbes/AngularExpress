@@ -1,0 +1,10 @@
+<div>
+  <div layout layout-align="start start" layout-wrap>
+    <div class="padding-md" ng-repeat="quote in hc.DisplayService.quotes" flex="100" flex-gt-xs="50">
+      <div class="border--light padding-lg">
+        <p class="intro margin-none">{{quote.text}}</p>
+        <h6 class="margin-top-sm">~{{quote.author}}</h6>
+      </div>
+    </div>
+  </div>
+</div>

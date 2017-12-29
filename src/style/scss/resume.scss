@@ -1,0 +1,12 @@
+/* Resume */
+.resume-links {
+  max-width: 612px;
+}
+
+.resume-canvas {
+  margin-bottom: 10px;
+  -webkit-animation: fadeIn $transition-duration;
+  -moz-animation: fadeIn $transition-duration;
+  -ms-animation: fadeIn $transition-duration;
+  border: 1px solid $grey;
+}

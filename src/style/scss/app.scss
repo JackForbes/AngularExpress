@@ -7,49 +7,6 @@
   display: none;
 }
 
-/* Toolbar area */
-.site-nav {
-  .md-toolbar-tools {
-    max-width: $lg-width;
-    margin: 0 auto;
-  }
-
-  &.is-transparent {
-    background-color: transparent;
-    border-bottom: none;
-  }
-
-  &.is-hidden {
-    display: none;
-  }
-}
-
-.logo {
-  padding: 12px 0;
-  text-align: left;
-  color: $primary-color;
-
-  md-icon {
-    min-width: 32px;
-    min-height: 32px;
-
-    svg * {
-      color: $primary-color;
-      fill: $primary-color;
-      transition: all $transition-duration $cubic-bezier;
-    }
-    @include gt-xs {
-      min-width: 114px;
-    };
-  }
-  @include toolbar-resize {
-    padding: 8px 0;
-  }
-  @include gt-sm {
-    padding: 12px 0;
-  }
-}
-
 .menu {
   background-color: transparent;
   border: none;

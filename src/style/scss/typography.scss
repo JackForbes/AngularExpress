@@ -2,7 +2,7 @@
 
 .body-text,
 body {
-  font-family: FreightSansLFPro-Regular;
+  font-family: 'Work Sans', sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
@@ -11,10 +11,6 @@ body {
     font-size: 18px;
     line-height: 24px;
   }
-}
-
-h1, h2, h3, .h4, h4, .h5, h5, .h6, h6 {
-  font-family: 'Work Sans', sans-serif;
 }
 
 input,
@@ -27,7 +23,7 @@ textarea {
 }
 
 .md-button {
-  font-family: FreightSansLFPro-Semibold;
+  font-family: 'Work Sans', sans-serif;
   font-size: 18px;
   font-weight: 500;
   line-height: 42px;

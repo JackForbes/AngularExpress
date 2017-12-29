@@ -7,7 +7,6 @@ import routes from './config';
 import AppController from './AppController';
 import AppService from './AppService';
 import DisplayService from './DisplayService';
-import Nav from './Nav';
 import ScrollReveal from './ScrollReveal';
 import ReadMore from './ReadMore';
 import Sticky from './Sticky';
@@ -20,7 +19,6 @@ appModule
   .controller('AppCtrl', AppController)
   .service('AppService', AppService)
   .service('DisplayService', DisplayService)
-  .directive('siteNav', Nav)
   .directive('scrollReveal', ScrollReveal)
   .directive('readMore', ReadMore)
   .directive('sticky', Sticky)
