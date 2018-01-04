@@ -176,7 +176,7 @@ function DisplayService () {
       // {
       //   title: 'Hangman',
       //   iconSrc: `${STATIC_IMAGES_URL}projects/Hangman.png`,
-      //   href: 'http://JackForbes.github.io/Coursera',
+      //   href: 'https://JackForbes.github.io/Coursera',
       //   description: 'This is a coding challenge I did for Coursera. The page allows users to play Hangman using endpoints that hit Coursera\'s servers.'
       // },
       // {
@@ -194,19 +194,19 @@ function DisplayService () {
       {
         title: 'Material Design Todo Lists',
         iconSrc: `${STATIC_IMAGES_URL}projects/Todo.png`,
-        href: 'http://jackforbes.github.io/ABL/',
+        href: 'https://jackforbes.github.io/ABL/',
         description: 'This is a todo lists app that I built for a coding challenge. It uses angular-material, a library that combines Material Design with AngularJS.'
       },
       // {
       //   title: 'Audyo - Software Course Project',
       //   iconSrc: `${STATIC_IMAGES_URL}projects/Audyo.png`,
-      //   href: 'http://audyo.me',
+      //   href: 'https://audyo.me',
       //   description: "This is a project I did for my Software Engineering course project in Fall, 2014. It is an idiosyncratic music app that is built with Mean.js."
       // },
       {
         title: 'Reddit Client',
         iconSrc: `${STATIC_IMAGES_URL}projects/Reddit.png`,
-        href: 'http://JackForbes.github.io/Pebble',
+        href: 'https://JackForbes.github.io/Pebble',
         description: 'This is a coding challenge I did for Pebble, to create a reddit client using AngularJS. The client allows users to open the Top and New posts for any desired subreddit.'
       },
       // {
@@ -224,13 +224,13 @@ function DisplayService () {
       {
         title: 'Information Systems Design Course Project',
         iconSrc: `${STATIC_IMAGES_URL}projects/UW_Athletic_Scheduler.png`,
-        href: 'http://msci-showcase.uwaterloo.ca/~j2forbes/',
+        href: 'https://msci-showcase.uwaterloo.ca/~j2forbes/',
         description: 'I built this in my third year at the University of Waterloo. This is an athletic facility scheduling app that assists students and faculty in determining when to use the athletic facilities on campus. Users can view free times for different sports, along with usage statistics for workout rooms.'
       },
       {
         title: 'Database Systems Course Project',
         iconSrc: `${STATIC_IMAGES_URL}projects/NHL_Logo.png`,
-        href: 'http://JackForbes.github.io/DBProject.html',
+        href: 'https://JackForbes.github.io/DBProject.html',
         description: 'This is a class project for one of my database courses in my second year at the University of Waterloo. This is a "fantasy NHL" app that lets users manipulate a database containing 2012 Stanley Cup NHL players. Users can view stats, as well as insert, modify, and delete players.'
       }
     ],
