@@ -20,10 +20,10 @@ This is an Angular 1.x application using Webpack. Angular 2 upgrade coming soon!
 
 ```bash
 # clone the repo
-$ git clone https://github.com/JackForbes/JackForbes.net.git
+$ git clone https://github.com/JackForbes/JackForbes.git
 
 # change directory to your app
-$ cd JackForbes.net
+$ cd JackForbes
 
 # install the dependencies with yarn
 $ yarn

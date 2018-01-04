@@ -1,9 +1,9 @@
 {
-  "name": "JackForbes.net",
+  "name": "JackForbes",
   "private": true,
   "version": "2.0.0",
   "description": "The personal site for Jack Forbes",
-  "repository": "https://github.com/JackForbes/JackForbes.net.git",
+  "repository": "https://github.com/JackForbes/JackForbes.git",
   "author": "Jack Forbes",
   "main": "index.js",
   "license": "MIT",
